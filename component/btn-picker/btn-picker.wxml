@@ -1,0 +1,5 @@
+<picker range="{{array}}" bindchange="bindPickerChange" range-key="{{rangeKey}}">
+    <view class="btn-picker_con">
+        <input class="btn-picker" ref="picker" value="{{label}}" placeholder="{{placeholder}}" disabled="true" />
+    </view>
+</picker>

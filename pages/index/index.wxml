@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+
+    <search-bar value="{{KeyName}}" bindinput="keyNameUpdate"></search-bar>
+
+    <view class="weui-flex">
+        <view class="weui-flex__item">
+            <btn-picker value="{{CityCode}}" bindinput="cityCodeInput" placeholder="地区" data="{{CityData}}"></btn-picker>
+        </view>
+        <view class="weui-flex__item">
+            <btn-picker value="{{TypeCode}}" bindinput="typeCodeInput" placeholder="类型" data="{{TypeData}}"></btn-picker>
+        </view>
+        <view class="weui-flex__item">
+            <btn-picker value="{{DateRange}}" bindinput="dateRangeInput" placeholder="时间段" data="{{DateRangeData}}"></btn-picker>
+        </view>
+    </view>
+
+    <text>{{KeyName}}</text>
+
+    <view style="height:calc(100% - 48px);">
+        <scroll-loader
+            action="/Api/Biding/GetZhaoBiaoList"
+            value="tableData"
+            bindinput="tableDataUpdate"
+            extra="{{searchObj}}"
+            id="scrollLoder">
+            <view wx:for="{{tableData}}" wx:key="{{index}}">
+                {{index}}文字文字文字
+            </view>
+        </scroll-loader>
+    </view>
+</view>

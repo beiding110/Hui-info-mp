@@ -1,0 +1,3 @@
+.scroll-loader{height:100%; font-size:14px;}
+
+.scroll-loader--loadingTip{font-size:14px; display: block; text-align: center;}

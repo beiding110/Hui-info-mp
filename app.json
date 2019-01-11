@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/user/user",
+        "pages/logs/logs",
+        "pages/webview/webview"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#545bdf",
+        "navigationBarTitleText": "惠信息",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "icon/icon-bidding.png",
+                "selectedIconPath": "icon/icon-bidding-sel.png",
+                "text": "招标"
+            },
+            {
+                "pagePath": "pages/webview/webview",
+                "iconPath": "icon/icon-project.png",
+                "selectedIconPath": "icon/icon-project-sel.png",
+                "text": "项目"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "iconPath": "icon/icon-trace.png",
+                "selectedIconPath": "icon/icon-trace-sel.png",
+                "text": "追踪"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "iconPath": "icon/icon-user.png",
+                "selectedIconPath": "icon/icon-user-sel.png",
+                "text": "我的"
+            }
+        ],
+        "backgroundColor": "#f7f7fa",
+        "selectedColor": "#61d4b6",
+        "color": "#999"
+    },
+    "networkTimeout": {
+        "request": 6000
+    }
+}

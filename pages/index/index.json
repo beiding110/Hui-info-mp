@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "search-bar": "/component/search-bar/search-bar",
+      "scroll-loader": "/component/scroll-loader/scroll-loader",
+      "btn-picker": "/component/btn-picker/btn-picker"
+  }
+}
