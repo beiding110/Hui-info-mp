@@ -1,0 +1,11 @@
+<view class="zh-card">
+    <view class="zh-card__header">
+        <slot name="header"></slot>
+    </view>
+    <view class="zh-card__body">
+        <slot></slot>
+    </view>
+    <view class="zh-card__footer">
+        <slot name="footer"></slot>
+    </view>
+</view>

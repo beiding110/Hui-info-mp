@@ -1,16 +1,16 @@
 <!--index.wxml-->
 <view class="container">
 
-    <search-bar value="{{KeyName}}" bindinput="keyNameUpdate"></search-bar>
+    <search-bar value="{{KeyName}}" bindinput="keyNameUpdate" bindsearch="queryData"></search-bar>
 
     <view class="weui-flex">
-        <view class="weui-flex__item">
+        <view class="weui-flex__item sel-btn__flex">
             <btn-picker value="{{CityCode}}" bindinput="cityCodeInput" placeholder="地区" data="{{CityData}}"></btn-picker>
         </view>
-        <view class="weui-flex__item">
+        <view class="weui-flex__item sel-btn__flex">
             <btn-picker value="{{TypeCode}}" bindinput="typeCodeInput" placeholder="类型" data="{{TypeData}}"></btn-picker>
         </view>
-        <view class="weui-flex__item">
+        <view class="weui-flex__item sel-btn__flex">
             <btn-picker value="{{DateRange}}" bindinput="dateRangeInput" placeholder="时间段" data="{{DateRangeData}}"></btn-picker>
         </view>
     </view>
@@ -24,9 +24,34 @@
             bindinput="tableDataUpdate"
             extra="{{searchObj}}"
             id="scrollLoder">
+
             <view wx:for="{{tableData}}" wx:key="{{index}}">
                 {{index}}文字文字文字
             </view>
+
+            <card class="info--card">
+                <text slot="header">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</text>
+                <view class="info--card__body">
+                    <view class="info--body__left">
+                        <view>
+                            <text>业主：中国人民古井不对河北省分队中国人民古井不对河北省分队中国人民古井不对河北省分队中国人民古井不对河北省分队</text>
+                        </view>
+                        <view>
+                            <text>代理机构：瑞和安徽项目管理集团</text>
+                        </view>
+                    </view>
+                    <view class="info--body__right">2018-06-05</view>
+                </view>
+                <view slot="footer" class="info--card__footer">
+                    <view class="info--footer__left">
+                        河北省-石家庄市
+                    </view>
+                    <view class="info--footer__right">
+                        <tag>招标公告</tag>
+                    </view>
+                </view>
+            </card>
+
         </scroll-loader>
     </view>
 </view>

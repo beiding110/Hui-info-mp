@@ -1,4 +1,4 @@
-.weui-search-bar{position:relative;padding:8px 10px;display:-webkit-box;display:-webkit-flex;display:flex;box-sizing:border-box;background-color:#efeff4;border-bottom:1rpx solid #d7d6dc}
+.weui-search-bar{position:relative;padding:8px 10px;display:-webkit-box;display:-webkit-flex;display:flex;box-sizing:border-box;background-color:#efeff4;}
 .weui-icon-search{margin-right:8px;font-size:inherit}
 .weui-icon-search_in-box{position:absolute;left:10px;top:7px}
 .weui-search-bar__text{display:inline-block;font-size:14px;vertical-align:middle}
@@ -9,8 +9,10 @@
 .weui-search-bar__label{position:absolute;top:0;right:0;bottom:0;left:0;z-index:2;border-radius:3px;text-align:center;color:#9b9b9b;background:#fff;line-height:28px}
 .weui-search-bar__cancel-btn{margin-left:10px;line-height:28px;color:#09bb07;white-space:nowrap}
 
-.weui-search-bar__form{border-radius:14px; overflow:hidden;}
-.weui-search-bar{z-index:10; background-color: #409EFF;}
-.weui-search-bar__cancel-btn{color:white;}
+.weui-search-bar__form{border-radius:5px; overflow:hidden;}
+.weui-search-bar{z-index:10; background-color: #fff;}
+.weui-search-bar__cancel-btn{color:#85D5BC;}
 
-.w-search{background:-webkit-linear-gradient(129deg, #B05ED6, #545BDF); background:-o-linear-gradient(129deg, #B05ED6, #545BDF); background:-moz-linear-gradient(129deg, #B05ED6, #545BDF); background:linear-gradient(129deg, #B05ED6, #545BDF);}
+.weui-search-bar__search-btn{display:inline-block; height:30px; width:30px; margin:0 .5em;}
+
+.w-search{}

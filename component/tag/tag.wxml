@@ -1,0 +1,4 @@
+<!--component/tag/tag.wxml-->
+<text class="{{'zh-tag ' + 'zh-tag--' + type}}">
+    <slot></slot>
+</text>

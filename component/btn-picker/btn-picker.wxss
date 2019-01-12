@@ -1,5 +1,6 @@
 .btn-picker_con{height:44px; position: relative; z-index:10; background:white; font-size:14px;}
 .btn-picker_con:before, .btn-picker_con:after{content:' '; display:block; position:absolute; }
-.btn-picker_con:before{width:100%; height:1px; background: #e5e5e5; bottom:0; }
-.btn-picker_con:after{content:' '; border-bottom:1px solid #9B9B9B; border-right:1px solid #9B9B9B; width:0.5em; height:0.5em; right:10%; top:50%; transform: translate(-50%, -50%) rotate(45deg);}
+.btn-picker_con:after{content:' '; border:5px solid rgba(0,0,0,0); border-top:5px solid rgba(207,205,205,1); width:0px; height:0px; right:10%; top:calc(50% + 2px); transform: translate(-50%, -50%) scaleX(1.1);}
 .btn-picker{border:none; display: block; width:80%; height:100%; color:#9B9B9B; margin: 0 auto;}
+
+/* .btn-picker + .btn-picker::before{width:1px; height:40%; background:red; left:10%; top:50%; transform:translateY(-50%); z-index:10;} */

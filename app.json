@@ -7,9 +7,9 @@
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#545bdf",
+        "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "惠信息",
-        "navigationBarTextStyle": "white"
+        "navigationBarTextStyle": "black"
     },
     "tabBar": {
         "list": [
@@ -38,8 +38,8 @@
                 "text": "我的"
             }
         ],
-        "backgroundColor": "#f7f7fa",
-        "selectedColor": "#61d4b6",
+        "backgroundColor": "#FEFEFE",
+        "selectedColor": "#BC86D6",
         "color": "#999"
     },
     "networkTimeout": {

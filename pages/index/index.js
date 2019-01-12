@@ -33,7 +33,10 @@ Page({
         getDictionary.call(this);
     },
     keyNameUpdate(e) {
-        this.searchHandler('KeyName', e.detail);
+        this.setData({
+            KeyName: e.detail,
+            'searchObj.KeyName': e.detail
+        })
     },
     cityCodeInput(e) {
         this.searchHandler('CityCode', e.detail);
@@ -52,6 +55,9 @@ Page({
 
         this.setData(obj);
 
+        this.queryData();
+    },
+    queryData() {
         this.selectComponent('#scrollLoder').reload();
     },
     tableDataUpdate(e) {

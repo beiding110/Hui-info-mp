@@ -5,3 +5,15 @@
 .container, page {
     height: 100%;
 }
+
+.sel-btn__flex{position:relative; padding:0 .5em;}
+.sel-btn__flex + .sel-btn__flex::before{content:' '; display:block; position:absolute; width:1px; height:40%; background:rgba(226,226,226,1); left:0; top:50%; transform:translateY(-50%); z-index:10;}
+
+.info--card{display:block; width:calc(100% - 16px); margin:8px auto; color:#666666;}
+.info--card__body{display:flex;}
+.info--body__left{flex:1; overflow:hidden;}
+.info--body__left > view {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:90%;}
+.info--body__right{display:inline-block; width:6em;}
+.info--card__footer{display:flex;}
+.info--footer__left, .info--footer__right {flex:1;}
+.info--footer__right{text-align:right;}

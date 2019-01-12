@@ -22,7 +22,6 @@ Component({
      */
     data: {
         barClass: 'search--bar',
-        model: '',
         focus: false,
 
         inputShowed: false,
@@ -44,6 +43,12 @@ Component({
             });
 
             this.clearInput();
+        },
+        searchInput() {
+            this.setData({
+                inputShowed: false
+            });
+            this.triggerEvent('search', this.data.inputVal);
         },
         clearInput: function () {
             _.modelEmit.call(this, {

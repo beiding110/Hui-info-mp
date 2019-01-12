@@ -9,8 +9,9 @@
         </view>
         <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
             <icon class="weui-icon-search" type="search" size="14"></icon>
-            <view class="weui-search-bar__text">搜索</view>
+            <view class="weui-search-bar__text">{{inputVal || '搜索'}}</view>
         </label>
     </view>
-    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    <image class="weui-search-bar__search-btn" hidden="{{!inputShowed}}" bindtap="searchInput" src="/icon/icon-plane.png"></image>
+    <!-- <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view> -->
 </view>
