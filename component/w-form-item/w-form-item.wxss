@@ -1,0 +1,6 @@
+@import "/style/weui.wxss"; 
+
+.required__star{color:red; position:absolute; left:5px; top:52%; transform:translate(0,-50%);}
+.weui-cell_select{padding:10px 15px;}
+
+.error__noti{position:absolute; bottom:-0.5em; font-size:10px; color:red;}

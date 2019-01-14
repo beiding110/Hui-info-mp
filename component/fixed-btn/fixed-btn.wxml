@@ -1,0 +1,4 @@
+<view class="fixed-btn" style="background-color:{{bgColor}}; color:{{color}};">
+    <text wx-if="iconfont" class="{{'iconfont ' + iconfont}}"></text>
+    <slot></slot>
+</view>

@@ -1,0 +1,3 @@
+@import "/style/icon.wxss";
+
+.fixed-btn{font-size:2em; position:fixed; right:20px; bottom:40px; background:red; border-radius:1em; line-height:2em; padding:0 .5em; text-align:center;}

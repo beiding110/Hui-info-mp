@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-import _ from '../../js/app-mp'
-import getDictionary from '../../utils/getDictionary.js'
+import _ from '../../../js/app-mp'
+import getDictionary from '../../../utils/getDictionary.js'
 
 Page({
     data: {
@@ -64,5 +64,14 @@ Page({
         this.setData({
             tableData: e.detail
         });
+    },
+    toDetail() {
+        var search = _.toSearch({
+            guid: '5676013822596189820',
+            type: 'GongShi'
+        });
+        wx.navigateTo({
+            url: '../detail/detail' + search
+        })
     }
 })

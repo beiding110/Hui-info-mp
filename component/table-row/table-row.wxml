@@ -1,0 +1,10 @@
+<view class="table-row">
+    <view style="{{labelWidth}}" class="table-label table-cell">
+        {{label}}
+    </view>
+    <view class="table-data table-cell">
+        <slot :row="$parent.data[prop]">
+            <view v-html="$parent.data[prop] || '-'"></view>
+        </slot>
+    </view>
+</view>

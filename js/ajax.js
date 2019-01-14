@@ -1,3 +1,5 @@
+import msg from './ui.js'
+
 function $ajax(arg) {
     wx.request({
         url: 'http://www.hbidding.com/huiinfo' + arg.url || '',
@@ -16,20 +18,13 @@ function $ajax(arg) {
                     }
 
                 }else{
-                    wx.showModal({
-                        title: '后台错误',
-                        content: obj.Msg,
-                        showCancel: false
-                    })
+                    msg.showMsgBox(obj.Msg)
                 }
             }
         },
         fail(res) {
             console.error(res);
-            wx.showToast({
-                title: '系统错误',
-                icon: 'warn'
-            });
+            msg.showMsg('系统错误', 'warn')
         },
         complete(res) {}
     })
@@ -57,6 +52,29 @@ export default {
             data: data,
             success: callback,
             type: 'GET'
+        })
+    },
+    $post(a, b, c) {
+        var url, data, callback;
+
+        url = a;
+        data = '';
+        callback = callback || function () { }
+
+        if (arguments.length == 2 && typeof (b) == 'function') {
+            callback = b;
+        } else if (arguments.length == 2 && typeof (b) != 'function') {
+            data = b;
+        } else if (arguments.length == 3) {
+            data = b;
+            callback = c;
+        }
+
+        $ajax({
+            url: url,
+            data: data,
+            success: callback,
+            type: 'POST'
         })
     }
 }

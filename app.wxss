@@ -4,6 +4,8 @@
 /**app.wxss**/
 .container, page {
     height: 100%;
+    font-size: 14px;
+    background-color: #F4F4F4;
 }
 
 .sel-btn__flex{position:relative; padding:0 .5em;}
@@ -17,3 +19,6 @@
 .info--card__footer{display:flex;}
 .info--footer__left, .info--footer__right {flex:1;}
 .info--footer__right{text-align:right;}
+
+button[type=primary]{background-color:#BC86D6;}
+button[type=primary].button-hover{background-color:#AF71CD;}

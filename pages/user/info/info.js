@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-import _ from '../../js/app-mp.js'
+import _ from '../../../js/app-mp.js'
 const app = getApp()
 
 Page({
@@ -27,5 +27,10 @@ Page({
                 })
             }
         }
+    },
+    toBindPhone() {
+        wx.navigateTo({
+            url: '../phone/phone'
+        })
     }
 })

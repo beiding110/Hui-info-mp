@@ -29,7 +29,7 @@
                 {{index}}文字文字文字
             </view>
 
-            <card class="info--card">
+            <card class="info--card" bindtap="toDetail">
                 <text slot="header">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</text>
                 <view class="info--card__body">
                     <view class="info--body__left">

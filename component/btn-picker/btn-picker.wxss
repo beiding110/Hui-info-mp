@@ -1,4 +1,4 @@
-.btn-picker_con{height:44px; position: relative; z-index:10; background:white; font-size:14px;}
+.btn-picker_con{height:44px; position: relative; z-index:10; background:white;}
 .btn-picker_con:before, .btn-picker_con:after{content:' '; display:block; position:absolute; }
 .btn-picker_con:after{content:' '; border:5px solid rgba(0,0,0,0); border-top:5px solid rgba(207,205,205,1); width:0px; height:0px; right:10%; top:calc(50% + 2px); transform: translate(-50%, -50%) scaleX(1.1);}
 .btn-picker{border:none; display: block; width:80%; height:100%; color:#9B9B9B; margin: 0 auto;}

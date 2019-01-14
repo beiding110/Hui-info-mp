@@ -1,7 +1,9 @@
 {
     "pages": [
-        "pages/index/index",
-        "pages/user/user",
+        "pages/bidding/list/list",
+        "pages/bidding/detail/detail",
+        "pages/user/info/info",
+        "pages/user/phone/phone",
         "pages/logs/logs",
         "pages/webview/webview"
     ],
@@ -14,7 +16,7 @@
     "tabBar": {
         "list": [
             {
-                "pagePath": "pages/index/index",
+                "pagePath": "pages/bidding/list/list",
                 "iconPath": "icon/icon-bidding.png",
                 "selectedIconPath": "icon/icon-bidding-sel.png",
                 "text": "招标"
@@ -32,7 +34,7 @@
                 "text": "追踪"
             },
             {
-                "pagePath": "pages/user/user",
+                "pagePath": "pages/user/info/info",
                 "iconPath": "icon/icon-user.png",
                 "selectedIconPath": "icon/icon-user-sel.png",
                 "text": "我的"

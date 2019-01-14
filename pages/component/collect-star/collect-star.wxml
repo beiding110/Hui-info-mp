@@ -1,0 +1,4 @@
+<fixed-btn
+    iconfont="{{value ? 'icon-xingxingxuanzhong' : 'icon-xingxingweixuanzhong'}}"
+    class="{{value ? 'collected' : 'collect'}}"
+    bindtap="tapHandler"></fixed-btn>

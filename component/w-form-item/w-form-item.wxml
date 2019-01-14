@@ -1,0 +1,20 @@
+<view class="{{arrow ? 'weui-cell weui-cell_select weui-cell_select-after' : 'weui-cell'}}">
+    <view class="weui-cell__hd">
+        <view class="weui-label">
+            <text wx:if="{{dataRequired}}" class="required__star">*</text>
+            {{label}}
+        </view>
+    </view>
+    <view class="weui-cell__bd">
+        <input
+            wx:if="slot"
+            class="weui-input"
+            type="{{type}}"
+            placeholder="{{placeholder}}"
+            value="{{model}}"
+            bindinput="modelUpdate" />
+        <slot></slot>
+    </view>
+
+    <font class="error__noti" wx:if="{{!!error}}">{{error}}</font>
+</view>

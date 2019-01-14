@@ -1,0 +1,93 @@
+<view wx:if="type=='GongShi'">
+    <view class="weui-form-preview">
+
+    	<view class="weui-form-preview__hd">
+    		<text class="weui-form-preview__value">{{detail.publicity_name}}</text>
+            <text class="weui-form-preview__value addtime">{{timeFormatter(detail.bulletin_issue_time)}}</text>
+        </view>
+    	<view class="weui-form-preview__bd">
+            <cell-list>
+                <cell foot="{{detail.hyname}}">
+                    所属行业
+                </cell>
+                <cell foot="{{detail.cityname}}">
+                    所属地区
+                </cell>
+            </cell-list>
+        </view>
+
+    </view>
+    <view class="weui-panel">
+    	<view class="weui-panel__bd">
+    		<view class="weui-media-box weui-media-box_text">
+    			<text class="weui-media-box__title">招标内容</text>
+    			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.bdcontent"></text> -->
+                <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.bdcontent}}"></rich-text>
+    		</view>
+    	</view>
+    </view>
+    <view class="weui-panel">
+    	<view class="weui-panel__bd">
+    		<view class="weui-media-box weui-media-box_text">
+    			<text class="weui-media-box__title">公示内容</text>
+    			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.publicity_content"></text> -->
+                <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.publicity_content}}"></rich-text>
+    		</view>
+    	</view>
+    </view>
+
+    <view class="weui-form-preview">
+    	<view class="weui-form-preview__bd">
+            <cell-list>
+                <cell foot="{{detail.publicity_start_time}}">
+                    公示时间
+                </cell>
+                <cell foot="{{detail.publicity_end_time}}">
+                    公示截止时间
+                </cell>
+
+                <cell foot="{{detail.yezhu}}">
+                    业主单位名称
+                </cell>
+                <cell foot="{{detail.zbdlname}}">
+                    招标代理机构名称
+                </cell>
+                <cell foot="{{detail.dllxrname}}">
+                    联系人
+                </cell>
+                <cell foot="{{detail.dltel}}">
+                    电话
+                </cell>
+                <cell foot="{{detail.dlphone}}">
+                    手机
+                </cell>
+                <cell foot="{{detail.dlemail}}">
+                    电子邮件
+                </cell>
+            </cell-list>
+        </view>
+    </view>
+</view>
+
+<view wx:elif="type=='GongGao'">
+    <view class="weui-form-preview">
+
+    	<view class="weui-form-preview__hd">
+    		<text class="weui-form-preview__value">{{detail.bulletin_name}}</text>
+            <text class="weui-form-preview__value addtime">{{timeFormatter(detail.bulletin_issue_time)}}</text>
+        </view>
+
+    </view>
+    <view class="weui-panel">
+    	<view class="weui-panel__bd">
+    		<view class="weui-media-box weui-media-box_text">
+    			<text class="weui-media-box__title">公告内容</text>
+    			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.bulletin_content"></text> -->
+                <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.bulletin_content}}"></rich-text>
+    		</view>
+    	</view>
+    </view>
+</view>
+
+<collect-star value="{{collect}}" bindinput="collectUpdate" guid="{{guid}}">
+</collect-star>

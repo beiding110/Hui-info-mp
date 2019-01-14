@@ -1,4 +1,4 @@
-.zh-card{background:rgba(255,255,255,1); border-radius:3px; font-size:14px; padding:1em;}
+.zh-card{background:rgba(255,255,255,1); border-radius:3px; padding:1em;}
 
 .zh-card__header{color:#353535; font-size:1.14em; font-weight:bold; display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .zh-card__header, .zh-card__body, .zh-card__footer{line-height:1.8em;}

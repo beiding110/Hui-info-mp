@@ -1,0 +1,74 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="user-page__bg"></view>
+    <view class="page-content user--page-content">
+        <view>
+            <!-- <view class="user_info__con">
+                <view>
+                    <view class="user_info__head_con">
+                        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                    </view>
+                    <view>
+                        <view class="user_info__user_name">
+                            <i class="{{$store.state.IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
+                            {{!!userInfo.nickName ? userInfo.nickName : '未设定'}}
+                        </view>
+                        <view class="user_info__vip_info">
+                            {{$store.state.IsVip ? ('会员到期日：'+ timeFormatter(form.VipEndDate)) : '非会员'}}
+                        </view>
+                    </view>
+                </view>
+            </view> -->
+
+            <view class="function__card user-info__card">
+                <view class="user-info__header">
+                    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                </view>
+                <view class="user-info__text">
+                    <view>
+                        {{!!userInfo.nickName ? userInfo.nickName : '未设定'}}
+                        <i class="{{$store.state.IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
+                    </view>
+                    <view>
+                        {{$store.state.IsVip ? ('会员到期日：'+ timeFormatter(form.VipEndDate)) : '非会员'}}
+                    </view>
+                </view>
+            </view>
+
+            <view class="function__card--group">
+                <view class="function__card" bindtap="toBindPhone">
+                    <i class="iconfont icon-shouji" style="color:#BC86D6;"></i>
+                    {{!!form.Mobile ? ('已绑定：' + form.Mobile) : '绑定手机号'}}
+                </view>
+
+                <view class="function__card">
+                    <i class="iconfont icon-huiyuan" style="color:#84B2FD;"></i>
+                    购买会员
+                </view>
+            </view>
+
+            <view class="function__card--group">
+                <!-- <view class="function__card">
+                    <i class="iconfont icon-fenxiang"></i>
+                    我的分享
+                </view> -->
+
+                <view class="function__card">
+                    <i class="iconfont icon-xingxingweixuanzhong" style="color:#FFAC9E;"></i>
+                    <view>
+                        <view>我的收藏</view>
+                        <view>技师找到关注的信息</view>
+                    </view>
+                </view>
+
+                <view class="function__card">
+                    <i class="iconfont icon-fapiao" style="color:#59D282;"></i>
+                    <view>
+                        <view>申请发票</view>
+                        <view>随时开发票，订单不丢失</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<card class="info--card">
+    <w-form value="{{form}}" id="form">
+        <form-item
+            label="手机号"
+            placeholder="请输入待绑定手机号"
+            prop="Mobile"
+            value="{{form.Mobile}}"
+            bindinput="formMobileUpdate"
+            data-mobile
+            data-required></form-item>
+
+        <view class="weui-btn-area">
+            <button type="primary" bindtap="bindMobile">绑定</button>
+        </view>
+    </w-form>
+</card>

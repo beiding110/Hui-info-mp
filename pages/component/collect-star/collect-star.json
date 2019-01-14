@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "fixed-btn": "/component/fixed-btn/fixed-btn"
+    }
+}
