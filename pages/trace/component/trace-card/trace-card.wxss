@@ -1,0 +1,10 @@
+@import "/style/icon.wxss";
+
+.trace-card{display:flex; align-items:center;}
+
+.trace-card--left{flex:1; position:relative; border:solid 1px #dfe0e1; border-radius:2px;}
+.trace-card--left .iconfont{position:absolute; font-size:20px; right:.5em; top:50%; transform:translate(-50%,-50%); z-index:10; color:#999999;}
+.trace-card--left input{display:block; height:30px; width:calc(100% - 2em); margin:0 auto;}
+
+.trace-card--right{width:44px; text-align:right; }
+.trace-card--right image{width:30px; height:30px; display:inline-block; margin:-10px 0;}

@@ -1,5 +1,6 @@
-import _ from '../../js/app-mp'
+import _ from '../../../../js/app-mp'
 
+// pages/trace/component/panel-select/panel-select.js
 Component({
     /**
      * 组件的属性列表
@@ -16,6 +17,8 @@ Component({
                 this.setData({
                     model: n
                 });
+
+                this.bindDefValueLabel(n);
             }
         },
         props: {
@@ -29,10 +32,17 @@ Component({
             type: Array,
             value: [],
             observer(n, o) {
-                this.setArray(n)
+                this.setArray(n);
+
+                this.bindDefValueLabel(this.properties.value)
             }
-        }
+        },
+        text: {
+            type: String,
+            value: '请选择'
+        },
     },
+
     /**
      * 组件的初始数据
      */
@@ -56,6 +66,8 @@ Component({
             _.modelEmit.call(this, {
                 model: this.data.arrayOrg[e.detail.value][this.properties.props.value]
             });
+
+            this.triggerEvent('select', this.data.arrayOrg[e.detail.value]);
         },
         setArray(arr) {
             this.setData({
@@ -64,6 +76,20 @@ Component({
                 }),
                 arrayOrg: arr
             })
+        },
+        bindDefValueLabel(n) {
+            var _index;
+            this.properties.data.forEach((item, index) => {
+                if(item[this.properties.props.value] === n) {
+                    _index = index;
+                }
+            })
+
+            if(_index !== undefined) {
+                this.setData({
+                    label: ((this.properties.data[_index] || {})[this.properties.props.label] || '')
+                })
+            }
         }
     }
 })

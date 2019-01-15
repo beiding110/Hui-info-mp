@@ -1,0 +1,16 @@
+<card>
+    <view class="trace-card">
+        <view class="trace-card--left">
+            <input
+                bindtap="toKeyWord"
+                bindinput="modelUpdate"
+                disabled="{{readonly}}"
+                value="{{model}}"
+                placeholder="点击设置追踪关键字，如：建筑、软件"></input>
+            <view class="iconfont icon-zhuizong" bindtap="toSetting"></view>
+        </view>
+        <view class="trace-card--right" wx:if="{{readonly}}">
+            <image src="/icon/icon-plane.png" bindtap="toDetail"></image>
+        </view>
+    </view>
+</card>

@@ -1,0 +1,4 @@
+.trace-settings--info{width:calc(100% - 20px); text-align:center; background-color:#dfe0e1; margin:10px auto; border-radius:2px;}
+.trace-settings--info .iconfont{display:inline-block;}
+
+button{width:calc(100% - 20px);}

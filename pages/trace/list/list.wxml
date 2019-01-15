@@ -1,0 +1,13 @@
+<view class="container">
+
+    <scroll-loader
+        action="/Api/DingYue/GetDingYueList"
+        value="tableData"
+        bindinput="tableDataUpdate"
+        id="scrollLoder">
+
+        <trace-card class="info--card"></trace-card>
+
+    </scroll-loader>
+
+</view>

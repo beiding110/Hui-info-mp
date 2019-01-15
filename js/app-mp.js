@@ -62,6 +62,7 @@ const _ = {
     Chain,
     showMsg: ui.showMsg,
     showMsgBox: ui.showMsgBox,
+    showConform: ui.showConform
 }
 
 // Array.prototype.merge = function(arr) {

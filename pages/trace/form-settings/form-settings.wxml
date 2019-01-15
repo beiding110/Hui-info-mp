@@ -1,0 +1,24 @@
+<view class="trace-setting--item">
+    <card>
+        <panel-select
+            text="设置时间段"
+            placeholder="设置后推送该时间段的追踪信息"
+            data="{{DateRangeData}}"
+            value="{{form.DateRange}}"
+            bindinput="updateFormDateRange" ></panel-select>
+    </card>
+</view>
+
+<view class="trace-setting--item">
+    <card>
+        <panel-select
+            text="设置地区"
+            placeholder="设置后推送该地区的追踪信息"
+            data="{{CityData}}"
+            value="{{form.CityCode}}"
+            bindinput="updateFormCityCode"
+            bindselect="citySelect"></panel-select>
+    </card>
+</view>
+
+<button type="primary" bindtap="doSave" class="trace-setting--item">保存</button>

@@ -1,0 +1,11 @@
+<picker range="{{array}}" bindchange="bindPickerChange" range-key="{{rangeKey}}">
+    <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{text}}</view>
+            <view class="{{'weui-media-box__desc' + label ? 'label' : ' placeholder'}}">
+                <text wx:if="{{label}}">{{label}}</text>
+                <text wx:else class="placeholder">{{placeholder}}</text>
+            </view>
+        </view>
+    </view>
+</picker>

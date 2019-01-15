@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "trace-card": "../component/trace-card/trace-card"
+  }
+}

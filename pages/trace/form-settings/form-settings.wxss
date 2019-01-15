@@ -1,0 +1,3 @@
+/* button{width:calc(100% - 20px);} */
+.trace-setting--item{width:calc(100% - 20px); margin:0 auto; margin-top:10px;}
+.trace-setting--item +  .trace-setting--item{margin-top:10px;}

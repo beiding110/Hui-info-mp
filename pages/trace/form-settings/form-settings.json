@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "card": "/component/card/card",
+      "panel-select": "../component/panel-select/panel-select"
+  }
+}

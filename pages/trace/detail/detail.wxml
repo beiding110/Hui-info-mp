@@ -1,0 +1,17 @@
+<view class="trace-detail__title">
+    建筑——石家庄市——近三天
+</view>
+
+<view class="trace-detail__infotip">
+    <view class="iconfont icon-zuobiao"></view>
+    今日更新
+    <font class="infotip-num">21</font>
+    条
+</view>
+
+<view class="trace-detail__list-con">
+    <navbar>
+        <nav-item label="招标" name="tab1">选项1内容</nav-item>
+        <nav-item label="项目" name="tab2">选项2内容</nav-item>
+    </navbar>
+</view>

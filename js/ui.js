@@ -18,5 +18,17 @@ export default {
                 }
             }
         })
+    },
+    showConform(content, callback) {
+        wx.showModal({
+            title: '提示',
+            content,
+            confirmColor: '#BC86D6',
+            success(confirm, cancle) {
+                if(confirm) {
+                    callback && callback()
+                }
+            }
+        })
     }
 }

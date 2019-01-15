@@ -3,26 +3,46 @@ const app = getApp()
 
 //所属地市
 function getCity() {
-    _.$get('/Api/Common/GetDictionary', {
-        type: 'City',
-    }, (res) => {
+    if(app.globalData.dictionary.CityData.length > 0) {
         this.setData({
-            CityData: res
+            CityData: app.globalData.dictionary.CityData
         });
-        app.globalData.dictionary.CityData = res;
-    });
+    } else {
+        _.$get('/Api/Common/GetDictionary', {
+            type: 'City',
+        }, (res) => {
+            res.unshift({label: '全部', value: ''});
+
+            if(this.data.CityData !== undefined) {
+                this.setData({
+                    CityData: res
+                });
+            }
+            app.globalData.dictionary.CityData = res;
+        });
+    }
 }
 
 //公告类型
 function getGglx() {
-    _.$get('/Api/Common/GetDictionary', {
-        type: 'GgLx',
-    }, (res) => {
+    if(app.globalData.dictionary.TypeData.length > 0) {
         this.setData({
-            TypeData: res
+            TypeData: app.globalData.dictionary.TypeData
         });
-        app.globalData.dictionary.TypeData = res;
-    });
+    } else {
+        _.$get('/Api/Common/GetDictionary', {
+            type: 'GgLx',
+        }, (res) => {
+            res.unshift({label: '全部', value: ''});
+
+            if(this.data.TypeData !== undefined) {
+                this.setData({
+                    TypeData: res
+                });
+            }
+            app.globalData.dictionary.TypeData = res;
+        });
+    }
 }
 
 //时间段
@@ -34,20 +54,46 @@ function getDateRange() {
 
 //所属行业
 function getSshy() {
-    _.$get('/Api/Common/GetDictionary', {
-        type: 'SsHy',
-    }, (res) => {
-        app.globalData.dictionary.HyData = res;
-    });
+    if(app.globalData.dictionary.HyData.length > 0) {
+        this.setData({
+            HyData: app.globalData.dictionary.HyData
+        });
+    } else {
+        _.$get('/Api/Common/GetDictionary', {
+            type: 'SsHy',
+        }, (res) => {
+            res.unshift({label: '全部', value: ''});
+
+            if(this.data.HyData !== undefined) {
+                this.setData({
+                    HyData: app.globalData.dictionary.HyData
+                });
+            }
+            app.globalData.dictionary.HyData = res;
+        });
+    }
 }
 
 //进度
 function getJzjd() {
-    _.$get('/Api/Common/GetDictionary', {
-        type: 'JzJd',
-    }, (res) => {
-        app.globalData.dictionary.JdData = res;
-    });
+    if(app.globalData.dictionary.JdData.length > 0) {
+        this.setData({
+            JdData: app.globalData.dictionary.JdData
+        });
+    } else {
+        _.$get('/Api/Common/GetDictionary', {
+            type: 'JzJd',
+        }, (res) => {
+            res.unshift({label: '全部', value: ''});
+
+            if(this.data.JdData !== undefined) {
+                this.setData({
+                    JdData: app.globalData.dictionary.JdData
+                });
+            }
+            app.globalData.dictionary.JdData = res;
+        });
+    }
 }
 
 export default function() {

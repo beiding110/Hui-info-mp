@@ -1,0 +1,11 @@
+<trace-card readonly="{{false}}" value="{{form.KeyName}}" bindinput="formKeyNameUpdate"></trace-card>
+
+<view class="trace-settings--info">
+    <view
+        class="iconfont icon-zhuizong"
+        bindtap="toSetting"></view>
+    时间段：{{form.DateRange || '-'}}
+    所属区域：{{form.CityName || '-'}}
+</view>
+
+<button type="primary" bindtap="doSave">保存</button>
