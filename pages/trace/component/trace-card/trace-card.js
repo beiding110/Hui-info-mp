@@ -1,4 +1,5 @@
 import _ from '../../../../js/app-mp'
+import util from '../../../../utils/util'
 
 // pages/trace/component/trace-card/trace-card.js
 Component({
@@ -17,6 +18,15 @@ Component({
                 this.setData({
                     model: n
                 })
+            }
+        },
+        data: {
+            type: Object,
+            value: {
+                RowGuid: '',
+                CityCode: '',
+                DateRange: '',
+                KeyName: ''
             }
         }
     },
@@ -39,29 +49,38 @@ Component({
         },
 
         toKeyWord() {
-            console.log('keyword')
-            if(this.properties.readonly) {
+            // console.log('keyword')
+            util.vipTest(() => {
+                if(this.properties.readonly) {
+                    var search = _.toSearch({
+                        type: 'new'
+                    });
+                    wx.navigateTo({
+                        url: ('/pages/trace/form-keyword/form-keyword' + search)
+                    });
+                }
+            })
+        },
+        toSetting() {
+            // console.log('setting')
+            util.vipTest(() => {
                 var search = _.toSearch({
                     type: 'new'
                 });
                 wx.navigateTo({
-                    url: ('/pages/trace/form-keyword/form-keyword' + search)
+                    url: ('/pages/trace/form-settings/form-settings' + search)
                 });
-            }
+            })
         },
-        toSetting() {
-            console.log('setting')
+        toDetail(e) {
+            if(!this.data.model) return;
+            let dataset = e.target.dataset;
+            // console.log('detail');
             var search = _.toSearch({
-                type: 'new'
-            });
-            wx.navigateTo({
-                url: ('/pages/trace/form-settings/form-settings' + search)
-            });
-        },
-        toDetail() {
-            console.log('detail');
-            var search = _.toSearch({
-                type: 'new'
+                RowGuid: dataset.guid,
+                CityCode: dataset.citycode,
+                DateRange: dataset.daterange,
+                KeyName: dataset.keyname
             });
             wx.navigateTo({
                 url: ('/pages/trace/detail/detail' + search)

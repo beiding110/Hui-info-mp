@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "惠信息·购买会员",
+    "usingComponents": {
+      "card": "/component/card/card",
+      "vip-table": "../component/vip-table/vip-table"
+    }
+}

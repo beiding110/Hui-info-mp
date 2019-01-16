@@ -1,0 +1,37 @@
+<scroll-loader
+    action="{{url}}"
+    value="tableData"
+    bindinput="tableDataUpdate"
+    extra="{{extra}}"
+    lazy="{{lazy}}"
+    id="scrollLoder">
+
+    <view wx:for="{{tableData}}" wx:key="{{index}}">
+        {{index}}文字文字文字
+    </view>
+
+    <card class="info--card" bindtap="toDetail">
+        <text slot="header">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</text>
+        <view class="info--card__body">
+            <view class="info--body__left">
+                <view>
+                    <text>业主：中国人民古井不对河北省分队中国人民古井不对河北省分队中国人民古井不对河北省分队中国人民古井不对河北省分队</text>
+                </view>
+                <view>
+                    <text>代理机构：瑞和安徽项目管理集团</text>
+                </view>
+            </view>
+            <view class="info--body__right">2018-06-05</view>
+        </view>
+        <view slot="footer" class="info--card__footer">
+            <view class="info--footer__left">
+                <view class="iconfont icon-zuobiao"></view>
+                河北省-石家庄市
+            </view>
+            <view class="info--footer__right">
+                <tag>招标公告</tag>
+            </view>
+        </view>
+    </card>
+
+</scroll-loader>

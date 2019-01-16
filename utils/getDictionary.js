@@ -97,7 +97,7 @@ function getJzjd() {
 }
 
 export default function() {
-    app.globalData.dictionary = {
+    app.globalData.dictionary = app.globalData.dictionary ? app.globalData.dictionary : {
         CityData: [],
         TypeData: [],
         DateRangeData: [

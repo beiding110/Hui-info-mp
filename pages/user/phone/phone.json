@@ -1,7 +1,8 @@
 {
-  "usingComponents": {
+    "navigationBarTitleText": "惠信息·绑定手机号",
+    "usingComponents": {
       "card": "/component/card/card",
       "w-form": "/component/w-form/w-form",
       "form-item": "/component/w-form-item/w-form-item"
-  }
+    }
 }

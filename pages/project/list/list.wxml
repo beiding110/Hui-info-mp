@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+
+    <search-bar value="{{KeyName}}" bindinput="keyNameUpdate" bindsearch="queryData"></search-bar>
+
+    <view class="weui-flex">
+        <view class="weui-flex__item sel-btn__flex">
+            <btn-picker value="{{CityCode}}" bindinput="cityCodeInput" placeholder="地区" data="{{CityData}}"></btn-picker>
+        </view>
+        <view class="weui-flex__item sel-btn__flex">
+            <btn-picker value="{{HyCode}}" bindinput="typeCodeInput" placeholder="行业" data="{{HyData}}"></btn-picker>
+        </view>
+        <view class="weui-flex__item sel-btn__flex">
+            <btn-picker value="{{JdCode}}" bindinput="dateRangeInput" placeholder="阶段" data="{{JdData}}"></btn-picker>
+        </view>
+    </view>
+
+    <text>{{KeyName}}</text>
+
+    <view style="height:calc(100% - 48px);">
+        <auto-list extra="{{searchObj}}" id="scrollLoder"></auto-list>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "提示",
+    "usingComponents": {
+        "card": "/component/card/card",
+        "vip-table": "/pages/user/component/vip-table/vip-table"
+    }
+}

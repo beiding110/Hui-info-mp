@@ -20,6 +20,10 @@ Component({
         extra: {
             type: Object,
             value: {}
+        },
+        lazy: {
+            type: Boolean,
+            value: false
         }
     },
 
@@ -103,7 +107,8 @@ Component({
             }
         }
     },
-    attached() {
-        this.reload()
+    ready() {
+        if(!this.properties.lazy)
+            this.reload()
     }
 })

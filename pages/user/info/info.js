@@ -32,5 +32,15 @@ Page({
         wx.navigateTo({
             url: '../phone/phone'
         })
+    },
+    toVipPay() {
+        wx.navigateTo({
+            url: '../vip-pay/vip-pay'
+        })
+    },
+    toCollent() {
+        wx.navigateTo({
+            url: '../collect/collect'
+        })
     }
 })

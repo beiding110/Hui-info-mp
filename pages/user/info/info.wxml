@@ -41,7 +41,7 @@
                     {{!!form.Mobile ? ('已绑定：' + form.Mobile) : '绑定手机号'}}
                 </view>
 
-                <view class="function__card">
+                <view class="function__card" bindtap="toVipPay">
                     <i class="iconfont icon-huiyuan" style="color:#84B2FD;"></i>
                     购买会员
                 </view>
@@ -53,11 +53,11 @@
                     我的分享
                 </view> -->
 
-                <view class="function__card">
+                <view class="function__card" bindtap="toCollent">
                     <i class="iconfont icon-xingxingweixuanzhong" style="color:#FFAC9E;"></i>
                     <view>
                         <view>我的收藏</view>
-                        <view>技师找到关注的信息</view>
+                        <view>及时找到关注的信息</view>
                     </view>
                 </view>
 

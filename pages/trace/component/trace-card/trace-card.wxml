@@ -10,7 +10,13 @@
             <view class="iconfont icon-zhuizong" bindtap="toSetting"></view>
         </view>
         <view class="trace-card--right" wx:if="{{readonly}}">
-            <image src="/icon/icon-plane.png" bindtap="toDetail"></image>
+            <image
+                src="{{'/icon/icon-plane' + (model ? '' : '-disabled') + '.png'}}"
+                bindtap="toDetail"
+                data-guid="{{data.RowGuid}}"
+                data-citycode="{{data.CityCode}}"
+                data-daterange="{{data.DateRange}}"
+                data-keyname="{{data.KeyName}}"></image>
         </view>
     </view>
 </card>

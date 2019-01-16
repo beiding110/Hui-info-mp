@@ -1,9 +1,9 @@
 {
-  "usingComponents": {
+    "navigationBarTitleText": "惠信息·招标列表",
+    "usingComponents": {
       "search-bar": "/component/search-bar/search-bar",
-      "scroll-loader": "/component/scroll-loader/scroll-loader",
       "btn-picker": "/component/btn-picker/btn-picker",
-      "card": "/component/card/card",
-      "tag": "/component/tag/tag"
-  }
+
+      "auto-list": "../component/auto-list/auto-list"
+    }
 }

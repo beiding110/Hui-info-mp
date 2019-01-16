@@ -14,7 +14,7 @@ Component({
                 this.setData({
                     $children: children
                 });
-                console.log(this.data.$children)
+                // console.log(this.data.$children)
             },
             linkChanged(tar) {},
             unlinked(tar) {

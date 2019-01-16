@@ -20,9 +20,6 @@ Page({
         TypeCode: '',
         DateRange: '',
 
-        //列表数据
-        tableData: [],
-
         //字典
         CityData: [],
         TypeData: [],
@@ -60,18 +57,4 @@ Page({
     queryData() {
         this.selectComponent('#scrollLoder').reload();
     },
-    tableDataUpdate(e) {
-        this.setData({
-            tableData: e.detail
-        });
-    },
-    toDetail() {
-        var search = _.toSearch({
-            guid: '5676013822596189820',
-            type: 'GongShi'
-        });
-        wx.navigateTo({
-            url: '../detail/detail' + search
-        })
-    }
 })

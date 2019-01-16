@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "惠信息·项目列表",
+    "usingComponents": {
+      "search-bar": "/component/search-bar/search-bar",
+      "btn-picker": "/component/btn-picker/btn-picker",
+
+      "auto-list": "../component/auto-list/auto-list"
+    }
+}

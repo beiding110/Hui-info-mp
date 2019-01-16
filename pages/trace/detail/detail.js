@@ -5,14 +5,24 @@ Page({
      * 页面的初始数据
      */
     data: {
-        
+        searchObj: {
+            KeyName: '',
+            CityCode: '',
+            RowGuid: '',
+            DateRange: ''
+        },
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            'searchObj.RowGuid': options.RowGuid || '',
+            'searchObj.CityCode': options.CityCode || '',
+            'searchObj.DateRange': options.DateRange || '',
+            'searchObj.KeyName': options.KeyName || '',
+        })
     },
 
     /**

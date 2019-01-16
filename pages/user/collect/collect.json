@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "惠信息·我的收藏",
+    "usingComponents": {
+      "navbar": "/component/navbar/navbar",
+      "nav-item": "/component/nav-item/nav-item",
+
+      "bidding-list": "/pages/bidding/component/auto-list/auto-list",
+      "project-list": "/pages/project/component/auto-list/auto-list"
+    }
+}

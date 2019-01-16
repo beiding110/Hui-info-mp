@@ -1,0 +1,8 @@
+<navbar>
+    <nav-item label="招标" name="tab1">
+        <bidding-list url="/Api/Collection/GetCollectList?type=ZhaoBiao" lazy></bidding-list>
+    </nav-item>
+    <nav-item label="项目" name="tab2">
+        <project-list url="/Api/Collection/GetCollectList?type=Project" lazy></project-list>
+    </nav-item>
+</navbar>

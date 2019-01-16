@@ -1,7 +1,9 @@
 {
-  "usingComponents": {
+    "navigationBarTitleText": "惠信息·招标详情",
+    "usingComponents": {
+      "card": "/component/card/card",
       "cell-list": "/component/cell-list/cell-list",
       "cell": "/component/cell/cell",
       "collect-star": "/pages/component/collect-star/collect-star"
-  }
+    }
 }

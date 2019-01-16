@@ -2,14 +2,19 @@
     "pages": [
         "pages/bidding/list/list",
         "pages/bidding/detail/detail",
+        "pages/project/list/list",
+        "pages/project/detail/detail",
         "pages/trace/list/list",
         "pages/trace/form-keyword/form-keyword",
         "pages/trace/form-settings/form-settings",
         "pages/trace/detail/detail",
         "pages/user/info/info",
         "pages/user/phone/phone",
+        "pages/user/vip-pay/vip-pay",
+        "pages/user/collect/collect",
         "pages/logs/logs",
-        "pages/webview/webview"
+        "pages/webview/webview",
+        "pages/msg/msg"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -26,7 +31,7 @@
                 "text": "招标"
             },
             {
-                "pagePath": "pages/webview/webview",
+                "pagePath": "pages/project/list/list",
                 "iconPath": "icon/icon-project.png",
                 "selectedIconPath": "icon/icon-project-sel.png",
                 "text": "项目"
