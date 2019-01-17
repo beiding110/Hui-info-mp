@@ -1,0 +1,4 @@
+<view class="badge-item">
+    <slot></slot>
+    <view class="{{'weui-badge badge-item__content is-fixed' + (isDot ? ' is-dot' : '')}}" wx:if="{{!hidden}}">{{isDot ? '' : value}}</view>
+</view>

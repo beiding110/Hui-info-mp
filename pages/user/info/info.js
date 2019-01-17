@@ -42,5 +42,10 @@ Page({
         wx.navigateTo({
             url: '../collect/collect'
         })
+    },
+    toInvoice() {
+        wx.navigateTo({
+            url: '../invoice/list/list'
+        })
     }
 })

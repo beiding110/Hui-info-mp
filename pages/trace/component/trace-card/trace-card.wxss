@@ -7,4 +7,4 @@
 .trace-card--left input{display:block; height:30px; width:calc(100% - 2em); margin:0 auto;}
 
 .trace-card--right{width:44px; text-align:right; }
-.trace-card--right image{width:30px; height:30px; display:inline-block; margin:-10px 0;}
+.trace-card--detail__btn{width:30px; height:30px; display:inline-block; margin:-10px 0;}

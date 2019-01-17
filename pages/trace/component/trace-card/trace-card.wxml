@@ -11,6 +11,7 @@
         </view>
         <view class="trace-card--right" wx:if="{{readonly}}">
             <image
+                class="trace-card--detail__btn"
                 src="{{'/icon/icon-plane' + (model ? '' : '-disabled') + '.png'}}"
                 bindtap="toDetail"
                 data-guid="{{data.RowGuid}}"

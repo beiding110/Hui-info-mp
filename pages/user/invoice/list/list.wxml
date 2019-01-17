@@ -1,0 +1,8 @@
+<navbar>
+    <nav-item label="订单" name="tab1">
+        <list-to></list-to>
+    </nav-item>
+    <nav-item label="已开票" name="tab2">
+        <list-ed></list-ed>
+    </nav-item>
+</navbar>

@@ -53,7 +53,7 @@ Component({
             util.vipTest(() => {
                 if(this.properties.readonly) {
                     var search = _.toSearch({
-                        type: 'new'
+                        type: this.properties.data.RowGuid || 'new'
                     });
                     wx.navigateTo({
                         url: ('/pages/trace/form-keyword/form-keyword' + search)
@@ -65,7 +65,7 @@ Component({
             // console.log('setting')
             util.vipTest(() => {
                 var search = _.toSearch({
-                    type: 'new'
+                    type: this.properties.data.RowGuid || 'new'
                 });
                 wx.navigateTo({
                     url: ('/pages/trace/form-settings/form-settings' + search)

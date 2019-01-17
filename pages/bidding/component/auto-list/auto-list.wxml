@@ -6,12 +6,19 @@
     lazy="{{lazy}}"
     id="scrollLoder">
 
-    <view wx:for="{{tableData}}" wx:key="{{index}}">
-        {{index}}文字文字文字
-    </view>
-
-    <card class="info--card" bindtap="toDetail">
-        <text slot="header">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</text>
+    <card
+        class="info--card"
+        wx:for="{{tableData}}"
+        wx:key="{{index}}"
+        bindtap="toDetail"
+        bindlongpress="longpressHandler"
+        data-guid="{{item.RowGuid}}"
+        data-type="{{item.Category}}">
+        <badge slot="header" is-dot hidden>
+            <view class="info--card__header">
+                <text>{{item.Title}}</text>
+            </view>
+        </badge>
         <view class="info--card__body">
             <view class="info--body__left">
                 <view>
@@ -21,15 +28,15 @@
                     <text>代理机构：瑞和安徽项目管理集团</text>
                 </view>
             </view>
-            <view class="info--body__right">2018-06-05</view>
+            <view class="info--body__right">{{timeFormatter(item.AddTime)}}</view>
         </view>
         <view slot="footer" class="info--card__footer">
             <view class="info--footer__left">
                 <view class="iconfont icon-zuobiao"></view>
-                河北省-石家庄市
+                {{item.cityname}}
             </view>
             <view class="info--footer__right">
-                <tag>招标公告</tag>
+                <tag>{{item.TypeName}}</tag>
             </view>
         </view>
     </card>

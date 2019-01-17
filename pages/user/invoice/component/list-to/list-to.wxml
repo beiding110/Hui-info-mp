@@ -1,0 +1,52 @@
+<view class="{{'scroll-loader--container' + (cbShow ? ' show-btn' : '')}}">
+    <scroll-loader
+        action="/Api/FaPiao/OrderList"
+        value="{{tableData}}"
+        bindinput="{{tableDataUpdate}}"
+        id="loader">
+
+        <checkbox-group bindchange="checkboxChange">
+            <card
+                class="info--card"
+                wx:for="{{tableData}}"
+                wx:key="item.PaymentTime"
+                bindtap="gotoForm"
+                bindlongpress="longpressHandler"
+                data-fapiaoguid="{{item.FaPiaoGuid}}"
+                data-item="{{item}}">
+
+                <view class="invoice-card--con">
+                    <view class="checkbox-bar" wx:if="{{cbShow}}">
+                        <checkbox
+                            value="{{item.OrderGuid}}"
+                            catchtap/>
+                    </view>
+                    <view class="info-bar">
+                        <view class="invoice-to--card__title" slot="header">
+                            <view>
+                                {{item.FkSm}}
+                                <icon type="success_no_circle" size="18" class="state-tip" wx:if="{{item.FaPiaoGuid}}"></icon>
+                            </view>
+                            <view>微信支付
+                                <text style="color:#E05457;">￥680</text>
+                            </view>
+                        </view>
+
+                        <view class="invoice-to--card__body">
+                            支付时间：{{item.PaymentTime}}
+                        </view>
+                    </view>
+                </view>
+
+            </card>
+        </checkbox-group>
+
+    </scroll-loader>
+
+</view>
+<view class="bottom-btn--conteiner" wx:if="{{cbShow}}">
+    <view class="bottom-bar">
+        <view class="bottom-btn bottom-btn--cancel" bindtap="cancelBtnHandler">取消</view>
+        <view class="bottom-btn bottom-btn--todo" bindtap="toMultiInvoiceHandler">去开票</view>
+    </view>
+</view>

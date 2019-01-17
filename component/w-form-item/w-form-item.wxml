@@ -7,7 +7,7 @@
     </view>
     <view class="weui-cell__bd">
         <input
-            wx:if="slot"
+            wx:if="{{!slots}}"
             class="weui-input"
             type="{{type}}"
             placeholder="{{placeholder}}"

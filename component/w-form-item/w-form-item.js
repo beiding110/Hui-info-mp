@@ -43,7 +43,7 @@ Component({
             type: String,
             value: ''
         },
-        slot: {
+        slots: {
             type: Boolean,
             value: false
         }
@@ -70,7 +70,7 @@ Component({
     },
     attached() {
         this.setData({
-            dataRequired: this.dataset.required
+            dataRequired: this.dataset.required || false
         })
     }
 })

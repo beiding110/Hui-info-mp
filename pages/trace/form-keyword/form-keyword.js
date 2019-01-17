@@ -58,6 +58,16 @@ Page({
         this.setData({
             'form.RowGuid': options.type==='new' ? '' : options.type
         });
+
+        if(options.type != 'new'){
+            _.$get('/Api/DingYue/GetDetail', {
+                id: options.type.type
+            }, (data) => {
+                this.setData({
+                    form: data
+                });
+            })
+        };
     },
 
     /**

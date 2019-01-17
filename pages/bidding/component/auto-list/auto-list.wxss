@@ -2,6 +2,8 @@
 
 .info--card{display:block; width:calc(100% - 16px); margin:8px auto; color:#666666;}
 
+.info--card__header{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
 .info--card__body{display:flex;}
 .info--body__left{flex:1; overflow:hidden;}
 .info--body__left > view {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:90%;}

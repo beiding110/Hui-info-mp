@@ -1,0 +1,22 @@
+<scroll-loader
+    action="/Api/FaPiao/FaPiaoList"
+    value="{{tableData}}"
+    bindinput="{{tableDataUpdate}}"
+    id="loader">
+
+    <card
+        class="info--card"
+        wx:for="{{tableData}}"
+        wx:key="item.PaymentTime"
+        bindtap="toDetail"
+        data-item="{{item}}">
+        <view class="invoice-to--card__title" slot="header">
+            {{item.FpType}}-{{item.Je}}
+        </view>
+
+        <view class="invoice-to--card__body">
+            申请时间：{{item.PaymentTime}}
+        </view>
+    </card>
+
+</scroll-loader>

@@ -54,7 +54,11 @@ Component({
      */
     methods: {
         submit() {
-            console.log('submit')
+            this.validate((res) => {
+                if(res) {
+                    this.triggerEvent('submit')
+                }
+            })
         },
         chainItem(obj) {
             var type = obj.type,

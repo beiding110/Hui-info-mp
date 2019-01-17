@@ -6,12 +6,18 @@
     lazy="{{lazy}}"
     id="scrollLoder">
 
-    <view wx:for="{{tableData}}" wx:key="{{index}}">
-        {{index}}文字文字文字
-    </view>
-
-    <card class="info--card" bindtap="toDetail">
-        <text slot="header">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</text>
+    <card
+        class="info--card"
+        wx:for="{{tableData}}"
+        wx:key="{{index}}"
+        bindtap="toDetail"
+        data-guid="{{item.RowGuid}}"
+        data-type="{{item.Category}}">
+        <badge slot="header" is-dot hidden>
+            <view class="info--card__header">
+                <text>{{item.Title}}</text>
+            </view>
+        </badge>
         <view class="info--card__body">
             <view class="info--body__left">
                 <view>
@@ -19,12 +25,12 @@
                 </view>
                 <view>
                     <view class="iconfont icon-zuobiao"></view>
-                    <text>河北省-石家庄市</text>
+                    <text>{{item.CityName}}</text>
                 </view>
             </view>
             <view class="info--body__right">
                 <view class="price">￥68000</view>
-                <view>2018-06-05</view>
+                <view>{{timeFormatter(item.AddTime)}}</view>
             </view>
         </view>
         <view slot="footer" class="info--card__footer">

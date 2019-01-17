@@ -6,6 +6,12 @@
         bindinput="tableDataUpdate"
         id="scrollLoder">
 
+        <trace-card
+            class="info--card"
+            wx:for="{{tableData}}" wx:key="{{index}}"
+            value="{{item.KeyName}}"
+            data="{{item}}"></trace-card>
+
         <trace-card class="info--card"></trace-card>
 
     </scroll-loader>

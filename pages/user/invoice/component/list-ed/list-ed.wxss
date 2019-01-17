@@ -1,0 +1,5 @@
+.invoice-to--card__title{display:flex;}
+
+.invoice-to--card__body{font-size: 13px;}
+
+.state-tip{height:70%;}

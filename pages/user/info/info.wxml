@@ -61,7 +61,7 @@
                     </view>
                 </view>
 
-                <view class="function__card">
+                <view class="function__card" bindtap="toInvoice">
                     <i class="iconfont icon-fapiao" style="color:#59D282;"></i>
                     <view>
                         <view>申请发票</view>

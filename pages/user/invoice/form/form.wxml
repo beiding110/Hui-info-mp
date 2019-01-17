@@ -1,0 +1,79 @@
+<card class="info--card">
+    <w-form value="{{form}}" id="form" class="invoice__form" bindsubmit="submit">
+        <form-item
+            label="发票类型"
+            prop="FpType"
+            value="{{form.FpType}}" bindinput="modelUpdate" data-prop="FpType"
+            data-required
+            slots="{{true}}"
+            >
+            <input
+                bindtap="showActionsheet"
+                value="{{form.FpType}}" bindinput="modelUpdate" data-prop="FpType"
+                ></input>
+        </form-item>
+        <form-item
+            label="单位名称"
+            placeholder="请输入单位名称"
+            prop="DwMc"
+            value="{{form.DwMc}}" bindinput="modelUpdate" data-prop="DwMc"
+            data-required></form-item>
+        <form-item
+            label="统一社会信用代码（税号）"
+            placeholder="请输入税号"
+            prop="XinYongCode"
+            value="{{form.XinYongCode}}" bindinput="modelUpdate" data-prop="XinYongCode"
+            data-required></form-item>
+        <form-item
+            label="地址"
+            placeholder="请输入地址"
+            prop="Address"
+            value="{{form.Address}}" bindinput="modelUpdate" data-prop="Address"
+            data-required></form-item>
+        <form-item
+            label="电话"
+            placeholder="请输入电话"
+            prop="DianHua"
+            value="{{form.DianHua}}" bindinput="modelUpdate" data-prop="DianHua"
+            data-required></form-item>
+        <form-item
+            label="开户行"
+            placeholder="请输入开户行"
+            prop="KaiHuHang"
+            value="{{form.KaiHuHang}}" bindinput="modelUpdate" data-prop="KaiHuHang"
+            data-required></form-item>
+        <form-item
+            label="账号"
+            placeholder="请输入账号"
+            prop="YinHangZhangHao"
+            value="{{form.YinHangZhangHao}}" bindinput="modelUpdate" data-prop="YinHangZhangHao"
+            data-required></form-item>
+        <form-item
+            label="金额"
+            placeholder="请输入金额"
+            prop="Je"
+            value="{{form.Je}}" bindinput="modelUpdate" data-prop="Je"
+            slots="{{true}}"
+            >
+            {{form.Je}} 元
+        </form-item>
+        <form-item
+            label="电子邮箱"
+            placeholder="请输入电子邮箱"
+            prop="Email"
+            value="{{form.Email}}" bindinput="modelUpdate" data-prop="Email"
+            data-required
+            data-mail></form-item>
+        <form-item
+            label="备注"
+            placeholder="请输入备注"
+            prop="Detail"
+            value="{{form.Detail}}" bindinput="modelUpdate" data-prop="Detail"
+            ></form-item>
+
+
+        <view class="weui-btn-area" slot="btn">
+            <button type="primary" bindtap="beforeSubmit">申请</button>
+        </view>
+    </w-form>
+</card>

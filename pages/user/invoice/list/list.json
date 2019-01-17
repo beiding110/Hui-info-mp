@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "navbar": "/component/navbar/navbar",
+        "nav-item": "/component/nav-item/nav-item",
+
+        "list-to": "../component/list-to/list-to",
+        "list-ed": "../component/list-ed/list-ed"
+    }
+}

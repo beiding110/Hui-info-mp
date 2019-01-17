@@ -44,10 +44,11 @@ Component({
         },
         toDetail() {
             util.vipTest(() => {
-                var search = _.toSearch({
-                    guid: '5676013822596189820',
-                    type: 'GongShi'
-                });
+                var ds = e.target.dataset,
+                    search = _.toSearch({
+                        guid: ds.guid,
+                        type: ds.type
+                    });
                 wx.navigateTo({
                     url: '../detail/detail' + search
                 })
@@ -55,6 +56,9 @@ Component({
         },
         reload() {
             this.selectComponent('#scrollLoder').reload();
+        },
+        timeFormatter(time) {
+            return / /.test(time) ? time.split(' ')[0] : time;
         }
     }
 })

@@ -1,0 +1,20 @@
+.invoice-to--card__title{display:flex;}
+.invoice-to--card__title view:first-child{flex:1; font-weight:bold; color:#353535;}
+.invoice-to--card__title view:last-child{font-size:13px; width:10em; text-align:right; color:#666666; font-weight:normal;}
+
+.invoice-to--card__body{font-size: 13px;}
+
+.state-tip{height:70%;}
+
+.invoice-card--con{display:flex; width:100%;}
+.checkbox-bar{width:40px;}
+.info-bar{flex:1;}
+
+chechbox{width:20px; height:20px;}
+
+.scroll-loader--container{height:100%;}
+.scroll-loader--container.show-btn{height:calc(100% - 44px);}
+.bottom-bar{height:44px; box-shadow:0px 7px 9px 0px rgba(198, 220, 153, 0.35); background-color:white; line-height:44px;}
+.bottom-btn{display:inline-block; padding:0 2em; position:relative; overflow:hidden;}
+.bottom-btn--todo{float:right; padding-right:3em;}
+.bottom-btn--todo::after{content:' '; display:inline-block; width:.5em; height:.5em; border:2px solid rgba(199,199,204,1); border-left:0; border-bottom:0; position:absolute; right:2em; top:52%; transform: rotate(45deg) translate(-50%,-50%);}
