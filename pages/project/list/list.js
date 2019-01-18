@@ -35,14 +35,9 @@ Page({
             'searchObj.KeyName': e.detail
         })
     },
-    cityCodeInput(e) {
-        this.searchHandler('CityCode', e.detail);
-    },
-    typeCodeInput(e) {
-        this.searchHandler('TypeCode', e.detail);
-    },
-    dateRangeInput(e) {
-        this.searchHandler('DateRange', e.detail);
+    modelUpdate(e) {
+        let ds = e.target.dataset;
+        this.searchHandler(ds.prop, e.detail);
     },
     searchHandler(key, value) {
         let obj = {};

@@ -14,23 +14,19 @@ Page({
             TypeCode: '',
             TypeName: '',
             CityCode: '',
-            CityName: '',
-            DateRange: '',
+            CityName: '全部',
+            DateRange: 3,
             KeyName: ''
         },
 
         DateRangeData: [],
         CityData: []
     },
-    updateFormDateRange(e) {
+    modelUpdate(e) {
+        let ds = e.target.dataset;
         this.setData({
-            'form.DateRange': e.detail
-        })
-    },
-    updateFormCityCode(e) {
-        this.setData({
-            'form.CityCode': e.detail
-        })
+            [ds.prop]: e.detail
+        });
     },
     citySelect(e) {
         this.setData({

@@ -24,7 +24,7 @@ function $ajax(arg) {
         },
         fail(res) {
             console.error(res);
-            msg.showMsg('系统错误', 'warn')
+            msg.showMsg('系统错误', 'none')
         },
         complete(res) {}
     })

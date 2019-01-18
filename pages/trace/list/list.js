@@ -1,4 +1,5 @@
-// pages/trace/list/list.js
+var app = getApp()
+
 Page({
 
     /**
@@ -31,7 +32,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        if(app.globalData.traceSign){
+            this.selectComponent('#scrollLoder').reload();
+            app.globalData.traceSign = false;
+        }
     },
 
     /**

@@ -21,6 +21,7 @@
         "pages/user/invoice/form/form",
 
         "pages/webview/webview",
+        "pages/authorization/authorization",
         "pages/msg/msg"
     ],
     "window": {

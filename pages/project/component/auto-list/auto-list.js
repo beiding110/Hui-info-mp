@@ -59,6 +59,22 @@ Component({
         },
         timeFormatter(time) {
             return / /.test(time) ? time.split(' ')[0] : time;
+        },
+        longpressHandler(e) {
+            console.log(e);
+            let ds = e.target.dataset;
+            wx.showActionSheet({
+                itemList: ['添加/取消收藏该条数据'],
+                itemColor: '#BC86D6',
+                success(res) {
+                    _.$get('/Api/Biding/GetDetail', {
+                        id: ds.guid,
+                        type: ds.type
+                    }, (data, res) => {
+                        _.showMsg(res.Msg)
+                    })
+                }
+            })
         }
     }
 })

@@ -8,20 +8,27 @@
     </view>
     <view class="weui-msg__opr-area">
         <view class="weui-btn-area">
-            <button type="primary" bindtap="goBack">返 回</button>
+            <view class="weui-flex">
+                <view class="weui-flex__item sel-btn__flex">
+                    <button type="primary" bindtap="goBack">返 回</button>
+                </view>
+                <view class="weui-flex__item sel-btn__flex" wx:if="{{!isVip}}">
+                    <button type="warn" bindtap="goVipPay">购 买</button>
+                </view>
+            </view>
         </view>
     </view>
 
-    <card class="info--card">
+    <card class="info--card" wx:if="{{!isVip}}">
         <vip-table></vip-table>
     </card>
 
-    <view class="weui-msg__extra-area">
+    <!-- <view class="weui-msg__extra-area">
         <view class="weui-footer">
             <view class="weui-footer__links">
                 <text href="javascript:void(0);" class="weui-footer__link">惠信息</text>
             </view>
             <view class="weui-footer__text">© 2019 中惠科技</view>
         </view>
-    </view>
+    </view> -->
 </view>

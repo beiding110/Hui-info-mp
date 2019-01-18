@@ -1,4 +1,5 @@
-// pages/msg/msg.js
+var app = getApp()
+
 Page({
 
     /**
@@ -9,10 +10,16 @@ Page({
         text: '',
         type: '',
 
-        iconType: ''
+        iconType: '',
+        isVip: app.globalData.IsVip
     },
     goBack() {
         wx.navigateBack();
+    },
+    goVipPay() {
+        wx.redirectTo({
+            url: '/pages/user/vip-pay/vip-pay'
+        })
     },
     /**
      * 生命周期函数--监听页面加载

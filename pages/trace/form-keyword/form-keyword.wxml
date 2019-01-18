@@ -4,8 +4,8 @@
     <view
         class="iconfont icon-zhuizong"
         bindtap="toSetting"></view>
-    时间段：{{form.DateRange || '-'}}
-    所属区域：{{form.CityName || '-'}}
+    时间段：{{dateRangeMap[form.DateRange]}}
+    所属区域：{{form.CityName || '全部'}}
 </view>
 
 <button type="primary" bindtap="doSave">保存</button>

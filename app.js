@@ -1,3 +1,5 @@
+import _ from './js/app-mp'
+
 //app.js
 App({
     onLaunch: function () {
@@ -25,6 +27,10 @@ App({
                                 this.userInfoReadyCallback(res)
                             }
                         }
+                    })
+                } else {
+                    wx.redirectTo({
+                        url: '/pages/authorization/authorization'
                     })
                 }
             }

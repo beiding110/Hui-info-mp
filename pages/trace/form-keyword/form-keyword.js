@@ -15,9 +15,15 @@ Page({
             TypeName: '',
             CityCode: '',
             CityName: '',
-            DateRange: '',
+            DateRange: 3,
             KeyName: ''
         },
+
+        dateRangeMap: {
+            3: '近三天',
+            7: '近一周',
+            30: '近一月'
+        }
     },
     formKeyNameUpdate(e) {
         this.setData({

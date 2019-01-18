@@ -11,6 +11,7 @@
         wx:for="{{tableData}}"
         wx:key="{{index}}"
         bindtap="toDetail"
+        bindlongpress="longpressHandler"
         data-guid="{{item.RowGuid}}"
         data-type="{{item.Category}}">
         <badge slot="header" is-dot hidden>

@@ -5,13 +5,13 @@
 
     <view class="weui-flex">
         <view class="weui-flex__item sel-btn__flex">
-            <btn-picker value="{{CityCode}}" bindinput="cityCodeInput" placeholder="地区" data="{{CityData}}"></btn-picker>
+            <btn-picker value="{{CityCode}}" bindinput="modelUpdate" placeholder="地区" data="{{CityData}}" data-prop="CityCode"></btn-picker>
         </view>
         <view class="weui-flex__item sel-btn__flex">
-            <btn-picker value="{{TypeCode}}" bindinput="typeCodeInput" placeholder="类型" data="{{TypeData}}"></btn-picker>
+            <btn-picker value="{{TypeCode}}" bindinput="modelUpdate" placeholder="类型" data="{{TypeData}}" data-prop="TypeCode"></btn-picker>
         </view>
         <view class="weui-flex__item sel-btn__flex">
-            <btn-picker value="{{DateRange}}" bindinput="dateRangeInput" placeholder="时间段" data="{{DateRangeData}}"></btn-picker>
+            <btn-picker value="{{DateRange}}" bindinput="modelUpdate" placeholder="时间段" data="{{DateRangeData}}" data-prop="DateRange"></btn-picker>
         </view>
     </view>
 

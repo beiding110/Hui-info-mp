@@ -22,11 +22,13 @@
 
             <view class="function__card user-info__card">
                 <view class="user-info__header">
-                    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                    <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+                    <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
                 </view>
                 <view class="user-info__text">
                     <view>
-                        {{!!userInfo.nickName ? userInfo.nickName : '未设定'}}
+                        <!-- {{!!userInfo.nickName ? userInfo.nickName : '未设定'}} -->
+                        <open-data type="userNickName" lang="zh_CN"></open-data>
                         <i class="{{$store.state.IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
                     </view>
                     <view>

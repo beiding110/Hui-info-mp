@@ -5,7 +5,8 @@
             placeholder="设置后推送该时间段的追踪信息"
             data="{{DateRangeData}}"
             value="{{form.DateRange}}"
-            bindinput="updateFormDateRange" ></panel-select>
+            bindinput="modelUpdate"
+            data-prop="form.DateRange"></panel-select>
     </card>
 </view>
 
@@ -16,7 +17,8 @@
             placeholder="设置后推送该地区的追踪信息"
             data="{{CityData}}"
             value="{{form.CityCode}}"
-            bindinput="updateFormCityCode"
+            bindinput="modelUpdate"
+            data-prop="form.CityCode"
             bindselect="citySelect"></panel-select>
     </card>
 </view>
