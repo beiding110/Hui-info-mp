@@ -7,14 +7,12 @@
                 <text class="weui-form-preview__value addtime">{{timeFormatter(detail.bulletin_issue_time)}}</text>
             </view>
         	<view class="weui-form-preview__bd">
-                <cell-list>
-                    <cell foot="{{detail.hyname}}">
-                        所属行业
-                    </cell>
-                    <cell foot="{{detail.cityname}}">
-                        所属地区
-                    </cell>
-                </cell-list>
+                <table-con
+                    data="{{detail}}"
+                    label="{{['所属行业','所属地区']}}"
+                    props="{{['hyname', 'cityname']}}"
+                    label-width="{{labelWidth}}">
+                </table-con>
             </view>
 
         </view>
@@ -46,33 +44,13 @@
     <card class="info--card">
         <view class="weui-form-preview">
         	<view class="weui-form-preview__bd">
-                <cell-list>
-                    <cell foot="{{detail.publicity_start_time}}">
-                        公示时间
-                    </cell>
-                    <cell foot="{{detail.publicity_end_time}}">
-                        公示截止时间
-                    </cell>
+                <table-con
+                    data="{{detail}}"
+                    label="{{['公示时间','公示截止时间','业主单位名称','招标代理机构名称','联系人','电话','手机','电子邮件']}}"
+                    props="{{['publicity_start_time', 'publicity_end_time','yezhu','zbdlname','dllxrname','dltel','dlphone','dlemail']}}"
+                    label-width="{{labelWidth}}">
+                </table-con>
 
-                    <cell foot="{{detail.yezhu}}">
-                        业主单位名称
-                    </cell>
-                    <cell foot="{{detail.zbdlname}}">
-                        招标代理机构名称
-                    </cell>
-                    <cell foot="{{detail.dllxrname}}">
-                        联系人
-                    </cell>
-                    <cell foot="{{detail.dltel}}">
-                        电话
-                    </cell>
-                    <cell foot="{{detail.dlphone}}">
-                        手机
-                    </cell>
-                    <cell foot="{{detail.dlemail}}">
-                        电子邮件
-                    </cell>
-                </cell-list>
             </view>
         </view>
     </card>

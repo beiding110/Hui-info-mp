@@ -1,15 +1,22 @@
 import msg from './ui.js'
 
 function $ajax(arg) {
+    var app = getApp()
     wx.request({
-        url: 'http://www.hbidding.com/huiinfo' + arg.url || '',
+        url: 'http://192.168.1.79:6060/huiInfo' + arg.url || '',//http://192.168.1.79:6060/huiInfo //http://www.hbidding.com/huiinfo
         data: arg.data || {},
         method: arg.type || 'GET',
+        header: {
+            'content-type': 'application/x-www-form-urlencoded',
+            '$source': app.globalData.$accountInfo.miniProgram.appId,
+            '$code': app.globalData.$code || ''
+        },
         success: function(res) {
             if(res.statusCode === 200) {
                 var obj = typeof(res.data)=='string' ? JSON.parse(res.data) : res.data;
 
                 if(obj.Success){
+                    app.globalData.IsVip = obj.IsVip;
 
                     if(/{|}|\[|\]/.test(obj.Data) && typeof obj.Data == 'string'){
                         arg.success && arg.success(JSON.parse(obj.Data), obj);

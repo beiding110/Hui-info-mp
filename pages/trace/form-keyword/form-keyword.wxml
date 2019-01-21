@@ -1,4 +1,4 @@
-<trace-card readonly="{{false}}" value="{{form.KeyName}}" bindinput="formKeyNameUpdate"></trace-card>
+<trace-card data="{{form}}" readonly="{{false}}" value="{{form.KeyName}}" bindinput="formKeyNameUpdate" save="{{doSave}}"></trace-card>
 
 <view class="trace-settings--info">
     <view

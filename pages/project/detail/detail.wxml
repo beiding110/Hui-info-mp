@@ -6,38 +6,12 @@
             <font class="weui-form-preview__value addtime">{{timeFormatter(detail.AddTime)}}</font>
         </view>
         <view class="weui-form-preview__bd">
-            <cell-list>
-                <cell foot="{{detail.ProCode}}">
-                    项目编号
-                </cell>
-                <cell foot="{{detail.ProName}}">
-                    项目名称
-                </cell>
-                <cell foot="{{detail.JdName}}">
-                    进展阶段
-                </cell>
-                <cell foot="{{detail.JsXzName}}">
-                    建设性质
-                </cell>
-                <cell foot="{{detail.SsHyName}}">
-                    所属行业
-                </cell>
-                <cell foot="{{detail.CityName}}">
-                    所属地区
-                </cell>
-                <cell foot="{{detail.E_JsZq}}">
-                    建设周期
-                </cell>
-                <cell foot="{{detail.TzZe}}">
-                    投资总额
-                </cell>
-                <cell foot="{{detail.ZjLy}}">
-                    资金来源
-                </cell>
-                <cell foot="{{detail.ZySb}}">
-                    主要设备
-                </cell>
-            </cell-list>
+            <table-con
+                data="{{detail}}"
+                label="{{['项目编号','项目名称','进展阶段','建设性质','所属行业','所属地区','建设周期','投资总额','资金来源','主要设备']}}"
+                props="{{['ProCode', 'ProName','JdName','JsXzName','SsHyName','CityName','E_JsZq','TzZe','ZjLy','ZySb']}}"
+                label-width="{{labelWidth}}">
+            </table-con>
         </view>
 
     </view>
@@ -57,35 +31,12 @@
 <card class="info--card">
     <view class="weui-form-preview">
     	<view class="weui-form-preview__bd">
-            <cell-list>
-                <cell foot="{{detail.JsDw}}">
-                    建设单位
-                </cell>
-                <cell foot="{{detail.HzWh}}">
-                    审批文号
-                </cell>
-                <cell foot="{{detail.HzBm}}">
-                    审批机关
-                </cell>
-                <cell foot="{{detail.JsAddress}}">
-                    建设地址
-                </cell>
-                <cell foot="{{detail.XmFzr}}">
-                    项目负责人
-                </cell>
-                <cell foot="{{detail.ZxDh}}">
-                    咨询电话
-                </cell>
-                <cell foot="{{detail.Phone}}">
-                    移动电话
-                </cell>
-                <cell foot="{{detail.Email}}">
-                    电子邮件
-                </cell>
-                <cell foot="{{detail.CzHm}}">
-                    传真
-                </cell>
-            </cell-list>
+            <table-con
+                data="{{detail}}"
+                label="{{['建设单位','审批文号','审批机关','建设地址','项目负责人','咨询电话','移动电话','电子邮件','传真']}}"
+                props="{{['JsDw', 'HzWh','HzBm','JsAddress','XmFzr','ZxDh','Phone','Email','CzHm']}}"
+                label-width="{{labelWidth}}">
+            </table-con>
         </view>
     </view>
 </card>

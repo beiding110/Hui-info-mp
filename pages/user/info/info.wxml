@@ -3,23 +3,6 @@
     <view class="user-page__bg"></view>
     <view class="page-content user--page-content">
         <view>
-            <!-- <view class="user_info__con">
-                <view>
-                    <view class="user_info__head_con">
-                        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-                    </view>
-                    <view>
-                        <view class="user_info__user_name">
-                            <i class="{{$store.state.IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
-                            {{!!userInfo.nickName ? userInfo.nickName : '未设定'}}
-                        </view>
-                        <view class="user_info__vip_info">
-                            {{$store.state.IsVip ? ('会员到期日：'+ timeFormatter(form.VipEndDate)) : '非会员'}}
-                        </view>
-                    </view>
-                </view>
-            </view> -->
-
             <view class="function__card user-info__card">
                 <view class="user-info__header">
                     <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
@@ -29,10 +12,10 @@
                     <view>
                         <!-- {{!!userInfo.nickName ? userInfo.nickName : '未设定'}} -->
                         <open-data type="userNickName" lang="zh_CN"></open-data>
-                        <i class="{{$store.state.IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
+                        <i class="{{IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
                     </view>
                     <view>
-                        {{$store.state.IsVip ? ('会员到期日：'+ timeFormatter(form.VipEndDate)) : '非会员'}}
+                        {{IsVip ? ('会员到期日：'+ timeFormatter(form.VipEndDate)) : '非会员'}}
                     </view>
                 </view>
             </view>

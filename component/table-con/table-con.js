@@ -1,25 +1,33 @@
 // component/table-con/table-con.js
 Component({
-    relations: {
-        '../table-row/table-row': {
-            type: 'child',
-            linked(tar) {},
-            linkChanged(tar) {},
-            unlinked(tar) {},
-        }
-    },
     /**
      * 组件的属性列表
      */
     properties: {
-
+        data: {
+            type: Object,
+            value: {}
+        },
+        label: {
+            type: Array,
+            value: []
+        },
+        props: {
+            type: Array,
+            value: []
+        },
+        labelWidth: {
+            type: String,
+            value: 'auto'
+        }
     },
 
     /**
      * 组件的初始数据
      */
     data: {
-
+        $children: [],
+        labelWidth: ''
     },
 
     /**
@@ -33,6 +41,9 @@ Component({
         }
     },
     ready() {
-        this._getAllLi()
+        this._getAllLi();
+        this.setData({
+            labelWidth: 'width:' + this.properties.labelWidth
+        })
     }
 })

@@ -14,7 +14,7 @@
         bindlongpress="longpressHandler"
         data-guid="{{item.RowGuid}}"
         data-type="{{item.Category}}">
-        <badge slot="header" is-dot hidden>
+        <badge slot="header" is-dot hidden="{{item.IsRead}}">
             <view class="info--card__header">
                 <text>{{item.Title}}</text>
             </view>
@@ -22,10 +22,10 @@
         <view class="info--card__body">
             <view class="info--body__left">
                 <view>
-                    <text>业主：中国人民古井不对河北省分队中国人民古井不对河北省分队中国人民古井不对河北省分队中国人民古井不对河北省分队</text>
+                    <text>业主：{{item.yezhu}}</text>
                 </view>
                 <view>
-                    <text>代理机构：瑞和安徽项目管理集团</text>
+                    <text>代理机构：{{item.zbdlname}}</text>
                 </view>
             </view>
             <view class="info--body__right">{{timeFormatter(item.AddTime)}}</view>

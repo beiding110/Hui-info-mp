@@ -1,4 +1,5 @@
 var app = getApp()
+import codeGetter from '../../../utils/codeGetter.js'
 
 Page({
 
@@ -13,12 +14,17 @@ Page({
             tableData: e.detail
         })
     },
+    queryData() {
+        this.selectComponent('#scrollLoder').reload();
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        codeGetter.call(this, () => {
+            this.queryData();
+        })
     },
 
     /**
@@ -32,8 +38,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        console.log('show')
+        this.queryData()
         if(app.globalData.traceSign){
-            this.selectComponent('#scrollLoder').reload();
+            this.queryData();
             app.globalData.traceSign = false;
         }
     },

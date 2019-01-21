@@ -24,3 +24,7 @@ button[type=primary]{background-color:#BC86D6;}
 button[type=primary].button-hover{background-color:#AF71CD;}
 
 .text-e{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.table{display:table}
+.tr{display:table-row}
+.td{display:table-cell}

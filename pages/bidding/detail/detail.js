@@ -10,6 +10,8 @@ Page({
         detail: {},
         collect: false,
 
+        labelWidth: '80px',
+
         guid: '',
         type: ''
     },

@@ -44,13 +44,13 @@ Component({
         },
         toDetail(e) {
             util.vipTest(() => {
-                var ds = e.target.dataset,
+                var ds = e.currentTarget.dataset,
                     search = _.toSearch({
                         guid: ds.guid,
                         type: ds.type
                     });
                 wx.navigateTo({
-                    url: '../detail/detail' + search
+                    url: '/pages/bidding/detail/detail' + search
                 })
             })
         },
@@ -67,9 +67,8 @@ Component({
                 itemList: ['添加/取消收藏该条数据'],
                 itemColor: '#BC86D6',
                 success(res) {
-                    _.$get('/Api/Biding/GetDetail', {
-                        id: ds.guid,
-                        type: ds.type
+                    _.$get('/Api/Collection/SetCollectState', {
+                        id: ds.guid
                     }, (data, res) => {
                         _.showMsg(res.Msg)
                     })

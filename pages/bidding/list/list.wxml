@@ -15,9 +15,7 @@
         </view>
     </view>
 
-    <text>{{KeyName}}</text>
-
     <view style="height:calc(100% - 48px);">
-        <auto-list extra="{{searchObj}}" id="scrollLoder"></auto-list>
+        <auto-list extra="{{searchObj}}" id="scrollLoder" lazy></auto-list>
     </view>
 </view>

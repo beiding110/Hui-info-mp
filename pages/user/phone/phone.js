@@ -15,7 +15,9 @@ Page({
     bindMobile() {
         this.selectComponent('#form').validate((res) => {
             if(res){
-                _.$post('/Api/user/BangDingMobile', this.data.form, (data) => {
+                _.$post('/Api/user/BangDingMobile', {
+                    Mobile: this.data.form.Mobile
+                }, (data) => {
                     _.showMsgBox('绑定成功', function(){
                         wx.navigateBack();
                         app.globalData.reMobile = true;

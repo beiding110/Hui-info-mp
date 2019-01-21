@@ -8,6 +8,10 @@ Page({
     data: {
 
     },
+    queryList() {
+        this.selectComponent('#bidding-list').reload();
+        this.selectComponent('#project-list').reload();
+    },
 
     /**
      * 生命周期函数--监听页面加载
@@ -20,7 +24,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        this.queryList();
     },
 
     /**
@@ -28,7 +32,7 @@ Page({
      */
     onShow: function () {
         if(app.globalData.collectSign){
-            this.selectComponent('#scrollLoder').reload();
+            this.queryList();
             app.globalData.collectSign = false;
         }
     },

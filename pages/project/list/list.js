@@ -3,6 +3,7 @@
 const app = getApp()
 import _ from '../../../js/app-mp'
 import getDictionary from '../../../utils/getDictionary.js'
+import codeGetter from '../../../utils/codeGetter.js'
 
 Page({
     data: {
@@ -28,6 +29,10 @@ Page({
     onLoad: function () {
         //请求使用到的数据字典
         getDictionary.call(this);
+
+        codeGetter.call(this, () => {
+            this.queryData();
+        })
     },
     keyNameUpdate(e) {
         this.setData({

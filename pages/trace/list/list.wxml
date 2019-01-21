@@ -4,7 +4,8 @@
         action="/Api/DingYue/GetDingYueList"
         value="tableData"
         bindinput="tableDataUpdate"
-        id="scrollLoder">
+        id="scrollLoder"
+        lazy>
 
         <trace-card
             class="info--card"

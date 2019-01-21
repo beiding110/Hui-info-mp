@@ -1,3 +1,10 @@
-<view class="table-con">
-    <slot></slot>
+<view class="table-con table">
+    <view class="table-row tr" wx:for="{{label}}" wx:key="{{index}}">
+        <view style="{{labelWidth}}" class="table-label table-cell td">
+            {{item}}
+        </view>
+        <view class="table-data table-cell td">
+            {{data[props[index]] || '-'}}
+        </view>
+    </view>
 </view>

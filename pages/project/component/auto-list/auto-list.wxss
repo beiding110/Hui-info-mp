@@ -18,3 +18,4 @@
 .price{color:#E05457; font-weight:bold;}
 
 .info-card{margin-right:1em;}
+.footer-tags{float:left; margin-bottom:.2em;}

@@ -3,6 +3,7 @@
     "usingComponents": {
         "scroll-loader": "/component/scroll-loader/scroll-loader",
         "card": "/component/card/card",
-        "tag": "/component/tag/tag"
+        "tag": "/component/tag/tag",
+        "badge": "/component/badge/badge"
     }
 }

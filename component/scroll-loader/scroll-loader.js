@@ -45,6 +45,10 @@ Component({
      */
     methods: {
         reload() {
+            this.setData({
+                loadController: true,
+                PageIndex: 1
+            });
             this.queryData(0, () => {
                 // console.log('upper complete')
             });

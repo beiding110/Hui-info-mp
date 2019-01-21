@@ -1,5 +1,6 @@
 import getDictionary from '../../../utils/getDictionary'
 import _ from '../../../js/app-mp'
+var app = getApp()
 
 // pages/trace/form-settings/form-settings.js
 Page({
@@ -54,7 +55,7 @@ Page({
 
         if(options.type != 'new'){
             _.$get('/Api/DingYue/GetDetail', {
-                id: options.type.type
+                id: options.type
             }, (data) => {
                 this.setData({
                     form: data

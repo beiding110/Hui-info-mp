@@ -3,7 +3,11 @@ Component({
     relations: {
         '../table-row/table-con': {
             type: 'parent',
-            linked(tar) {},
+            linked(tar) {
+                this.setData({
+                    $parent: tar
+                });
+            },
             linkChanged(tar) {},
             unlinked(tar) {},
         }
@@ -30,7 +34,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-
+        $parent: []
     },
 
     /**

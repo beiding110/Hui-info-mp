@@ -18,6 +18,7 @@ Page({
             DateRange: 3,
             KeyName: ''
         },
+        doSave: null,
 
         dateRangeMap: {
             3: '近三天',
@@ -30,14 +31,23 @@ Page({
             'form.KeyName': e.detail
         });
     },
-    doSave() {
+    doSave(callback) {
         var that = this;
 
         if(this.data.form.KeyName) {
             _.$post('/Api/DingYue/DingYueManager', this.data.form, (data) => {
                 app.globalData.traceSign = true;
+                this.setData({
+                    'form.RowGuid': data
+                });
 
-                callback && callback();
+                if(typeof(callback) === 'function') {
+                    callback(data)
+                } else {
+                    app.globalData.traceSign = true;
+
+                    wx.navigateBack();
+                }
             })
         } else {
             if(this.data.form.RowGuid) {
@@ -45,7 +55,9 @@ Page({
                     _.$get('/Api/DingYue/DeleteDingYue', {
                         id: this.data.form.RowGuid
                     }, function(data){
-                        wx.navigateBack()
+                        app.globalData.traceSign = true;
+
+                        wx.navigateBack();
                     })
                 })
             } else {
@@ -54,7 +66,6 @@ Page({
                 })
             }
         }
-
     },
 
     /**
@@ -62,18 +73,9 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            'form.RowGuid': options.type==='new' ? '' : options.type
+            'form.RowGuid': options.type==='new' ? '' : options.type,
+            'doSave': this.doSave
         });
-
-        if(options.type != 'new'){
-            _.$get('/Api/DingYue/GetDetail', {
-                id: options.type.type
-            }, (data) => {
-                this.setData({
-                    form: data
-                });
-            })
-        };
     },
 
     /**
@@ -87,7 +89,15 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        if(this.data.form.RowGuid != 'new'){
+            _.$get('/Api/DingYue/GetDetail', {
+                id: this.data.form.RowGuid
+            }, (data) => {
+                this.setData({
+                    form: data
+                });
+            })
+        };
     },
 
     /**

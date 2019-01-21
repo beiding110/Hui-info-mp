@@ -28,6 +28,10 @@ Component({
                 DateRange: '',
                 KeyName: ''
             }
+        },
+        save: {
+            type: Function,
+            value: function() {}
         }
     },
 
@@ -62,15 +66,23 @@ Component({
             })
         },
         toSetting() {
-            // console.log('setting')
-            util.vipTest(() => {
-                var search = _.toSearch({
-                    type: this.properties.data.RowGuid || 'new'
-                });
-                wx.navigateTo({
-                    url: ('/pages/trace/form-settings/form-settings' + search)
-                });
-            })
+            // console.log('setting');
+            function navHandler(RowGuid) {
+                util.vipTest(() => {
+                    var search = _.toSearch({
+                        type: RowGuid ? RowGuid : (this.properties.data.RowGuid || 'new')
+                    });
+                    wx.navigateTo({
+                        url: ('/pages/trace/form-settings/form-settings' + search)
+                    });
+                })
+            }
+
+            if (this.properties.save){
+                this.properties.save(navHandler);
+            } else {
+                navHandler.call(this)
+            }
         },
         toDetail(e) {
             if(!this.data.model) return;

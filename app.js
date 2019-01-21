@@ -8,8 +8,15 @@ App({
         wx.login({
             success: res => {
             // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                this.globalData.$code = res.code;
+
+                this.wxLoginCallback && this.wxLoginCallback(res.code);
             }
         });
+
+        const accountInfo = wx.getAccountInfoSync();
+        this.globalData.$accountInfo = accountInfo;
+
         // 获取用户信息
         wx.getSetting({
             success: res => {

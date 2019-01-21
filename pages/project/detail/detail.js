@@ -9,6 +9,7 @@ Page({
     data: {
         detail: {},
         collect: false,
+        labelWidth: '80px',
 
         guid: '',
         type: ''

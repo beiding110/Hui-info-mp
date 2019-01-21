@@ -7,7 +7,7 @@
                 disabled="{{readonly}}"
                 value="{{model}}"
                 placeholder="点击设置追踪关键字，如：建筑、软件"></input>
-            <view class="iconfont icon-zhuizong" bindtap="toSetting"></view>
+            <view class="iconfont icon-zhuizong" bindtap="toSetting" wx:if="{{model}}"></view>
         </view>
         <view class="trace-card--right" wx:if="{{readonly}}">
             <image
