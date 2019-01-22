@@ -53,7 +53,9 @@ Page({
     },
     submit() {
         _.$post('/Api/FaPiao/AddFaPiao', this.data.form, (data) => {
-            _.ShowMsgBox('发票申请成功', function(){
+            _.showMsgBox('发票申请成功', function(){
+                app.globalData.invoiceSign = true;
+
                 wx.navigateBack();
             })
         })

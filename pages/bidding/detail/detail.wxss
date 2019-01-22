@@ -1,1 +1,13 @@
-/* pages/bidding/detail/detail.wxss */
+.weui-form-preview+.weui-form-preview{margin-top:10px;}
+
+.weui-form-preview__hd{text-align: left;}
+.weui-form-preview__hd .weui-form-preview__value.addtime{text-align: center; color:#909399; font-size:1.2em;}
+
+.weui-media-box__desc>table{max-width:100%; border:1px solid #F2F6FC;}
+.weui-media-box__desc>table tr{border:1px solid #F2F6FC;}
+.weui-media-box__desc>table tr td{border:1px solid #F2F6FC;}
+
+.weui-form-preview__hd .weui-form-preview__value {
+    font-style: normal;
+    font-size: 1.6em;
+}

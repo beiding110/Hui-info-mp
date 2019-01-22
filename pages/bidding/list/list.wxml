@@ -14,7 +14,6 @@
             <btn-picker value="{{DateRange}}" bindinput="modelUpdate" placeholder="时间段" data="{{DateRangeData}}" data-prop="DateRange"></btn-picker>
         </view>
     </view>
-
     <view style="height:calc(100% - 48px);">
         <auto-list extra="{{searchObj}}" id="scrollLoder" lazy></auto-list>
     </view>

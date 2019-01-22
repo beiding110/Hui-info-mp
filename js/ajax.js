@@ -1,17 +1,25 @@
 import msg from './ui.js'
+import loginHandler from '../utils/loginHandler.js'
 
 function $ajax(arg) {
     var app = getApp()
     wx.request({
-        url: 'http://192.168.1.79:6060/huiInfo' + arg.url || '',//http://192.168.1.79:6060/huiInfo //http://www.hbidding.com/huiinfo
+        url: 'http://192.168.1.79:6060/Huiinfo' + arg.url || '',//http://192.168.1.79:6060/huiInfo //https://huiinfo.zhbykj.com/Huiinfo
         data: arg.data || {},
         method: arg.type || 'GET',
         header: {
             'content-type': 'application/x-www-form-urlencoded',
             '$source': app.globalData.$accountInfo.miniProgram.appId,
-            '$code': app.globalData.$code || ''
+            '$code': app.globalData.$code || '',
+            'cookie': app.globalData.$cookie || ''
         },
         success: function(res) {
+            // var cookie = res.header['Set-Cookie'];
+            // console.log(cookie)
+            // if(cookie) {
+            //     app.globalData.$cookie = cookie;
+            // }
+
             if(res.statusCode === 200) {
                 var obj = typeof(res.data)=='string' ? JSON.parse(res.data) : res.data;
 
@@ -25,7 +33,11 @@ function $ajax(arg) {
                     }
 
                 }else{
-                    msg.showMsgBox(obj.Msg)
+                    if(/身份/.test(obj.msg)) {
+                        loginHandler.call(app)
+                    }else {
+                        msg.showMsgBox(obj.Msg)
+                    }
                 }
             }
         },

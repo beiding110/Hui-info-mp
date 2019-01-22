@@ -1,4 +1,4 @@
-// pages/user/invoice/list/list.js
+var app = getApp()
 Page({
 
     /**
@@ -7,12 +7,16 @@ Page({
     data: {
 
     },
+    reload() {
+        this.selectComponent('#listTo').reload();
+        this.selectComponent('#listEd').reload();
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.reload()
     },
 
     /**
@@ -26,8 +30,11 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        this.selectComponent('#listTo').reload();
-        this.selectComponent('#listEd').reload();
+        if(app.globalData.invoiceSign) {
+            this.reload()
+
+            app.globalData.invoiceSign = false;
+        }
     },
 
     /**

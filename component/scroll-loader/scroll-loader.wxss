@@ -1,3 +1,5 @@
 .scroll-loader{height:100%; background-color:#F4F4F4;}
 
 .scroll-loader--loadingTip{display: block; text-align: center;}
+
+.no-info{color:#aaa; margin:1em;}

@@ -1,10 +1,10 @@
-<view wx:if="type=='GongShi'">
+<block wx:if="{{type==='GongShi'}}">
     <card class="info--card">
         <view class="weui-form-preview">
 
         	<view class="weui-form-preview__hd">
-        		<text class="weui-form-preview__value">{{detail.publicity_name}}</text>
-                <text class="weui-form-preview__value addtime">{{timeFormatter(detail.bulletin_issue_time)}}</text>
+        		<h1 class="weui-form-preview__value">{{detail.publicity_name}}</h1>
+                <text class="weui-form-preview__value addtime">{{detail.bulletin_issue_time}}</text>
             </view>
         	<view class="weui-form-preview__bd">
                 <table-con
@@ -23,7 +23,7 @@
         		<view class="weui-media-box weui-media-box_text">
         			<text class="weui-media-box__title">招标内容</text>
         			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.bdcontent"></text> -->
-                    <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.bdcontent}}"></rich-text>
+                    <rich-text class="rich-text__con" nodes="{{detail.bdcontent}}"></rich-text>
         		</view>
         	</view>
         </view>
@@ -35,7 +35,7 @@
         		<view class="weui-media-box weui-media-box_text">
         			<text class="weui-media-box__title">公示内容</text>
         			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.publicity_content"></text> -->
-                    <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.publicity_content}}"></rich-text>
+                    <rich-text class="rich-text__con" nodes="{{detail.publicity_content}}"></rich-text>
         		</view>
         	</view>
         </view>
@@ -54,15 +54,15 @@
             </view>
         </view>
     </card>
-</view>
+</block>
 
-<view wx:elif="type=='GongGao'">
+<block wx:elif="{{type==='GongGao'}}">
     <card class="info--card">
         <view class="weui-form-preview">
 
         	<view class="weui-form-preview__hd">
-        		<text class="weui-form-preview__value">{{detail.bulletin_name}}</text>
-                <text class="weui-form-preview__value addtime">{{timeFormatter(detail.bulletin_issue_time)}}</text>
+        		<h1 class="weui-form-preview__value">{{detail.bulletin_name}}</h1>
+                <text class="weui-form-preview__value addtime">{{detail.bulletin_issue_time}}</text>
             </view>
 
         </view>
@@ -73,12 +73,12 @@
         		<view class="weui-media-box weui-media-box_text">
         			<text class="weui-media-box__title">公告内容</text>
         			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.bulletin_content"></text> -->
-                    <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.bulletin_content}}"></rich-text>
+                    <rich-text class="rich-text__con" nodes="{{detail.bulletin_content}}"></rich-text>
         		</view>
         	</view>
         </view>
     </card>
-</view>
+</block>
 
 <collect-star value="{{collect}}" bindinput="collectUpdate" guid="{{guid}}">
 </collect-star>

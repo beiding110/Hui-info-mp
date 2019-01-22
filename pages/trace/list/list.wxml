@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" style="height:calc(100% - {{officalHidden ? '0' : '84px'}})">
 
     <scroll-loader
         action="/Api/DingYue/GetDingYueList"
@@ -17,4 +17,15 @@
 
     </scroll-loader>
 
+</view>
+
+<view class="fixed-card" hidden="{{officalHidden}}">
+    <cover-view class="fixed-card--text left" style="">
+        <cover-view class="iconfont icon-zhuizong1"></cover-view>关注公众号以获取推送信息
+    </cover-view>
+    <cover-view class="fixed-card--text right" style="" bindtap="closeFixed">
+        关闭
+    </cover-view>
+
+    <official-account bindload="officalLoaded"></official-account>
 </view>

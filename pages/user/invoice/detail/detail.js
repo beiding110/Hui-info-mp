@@ -5,14 +5,16 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        form: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.form = app.globalData.invoicedInfo;
+        this.setData({
+            form: app.globalData.invoicedInfo
+        })
     },
 
     /**

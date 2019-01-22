@@ -22,7 +22,9 @@ Page({
             'searchObj.CityCode': options.CityCode || '',
             'searchObj.DateRange': options.DateRange || '',
             'searchObj.KeyName': options.KeyName || '',
-        })
+        });
+        this.selectComponent('#bidding-list').reload();
+        this.selectComponent('#project-list').reload();
     },
 
     /**

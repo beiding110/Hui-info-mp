@@ -1,4 +1,5 @@
 var app = getApp()
+import _ from '../../../../../js/app-mp'
 
 Component({
     options: {
@@ -27,14 +28,21 @@ Component({
      */
     methods: {
         tableDataUpdate(e) {
+            let tableData = e.detail;
+            tableData.forEach(function(item) {
+                var fksm = item.FkSm.split('：');
+                item.title = fksm[0];
+                item.je = fksm[1];
+            })
+
             this.setData({
                 tableData: e.detail
             });
         },
         gotoForm(e) {
-            var ds = e.target.dataset;
+            var ds = e.currentTarget.dataset;
             if(ds.fapiaoguid) {
-                app.ShowMsgBox('该项已申请开票，请勿重复开票');
+                _.showMsgBox('该项已申请开票，请勿重复开票');
                 return;
             };
 

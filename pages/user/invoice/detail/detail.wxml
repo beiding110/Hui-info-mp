@@ -28,7 +28,7 @@
             {{form.Email}}
         </form-item>
         <form-item label="备注" slots>
-            {{form.Detail}}
+            {{form.Detail || '-'}}
         </form-item>
     </w-form>
 </card>

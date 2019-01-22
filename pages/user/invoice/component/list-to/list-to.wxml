@@ -2,14 +2,15 @@
     <scroll-loader
         action="/Api/FaPiao/OrderList"
         value="{{tableData}}"
-        bindinput="{{tableDataUpdate}}"
-        id="loader">
+        bindinput="tableDataUpdate"
+        id="loader"
+        lazy>
 
         <checkbox-group bindchange="checkboxChange">
             <card
                 class="info--card"
                 wx:for="{{tableData}}"
-                wx:key="item.PaymentTime"
+                wx:key="{{item.PaymentTime}}"
                 bindtap="gotoForm"
                 bindlongpress="longpressHandler"
                 data-fapiaoguid="{{item.FaPiaoGuid}}"
@@ -24,11 +25,11 @@
                     <view class="info-bar">
                         <view class="invoice-to--card__title" slot="header">
                             <view>
-                                {{item.FkSm}}
+                                {{item.title}}
                                 <icon type="success_no_circle" size="18" class="state-tip" wx:if="{{item.FaPiaoGuid}}"></icon>
                             </view>
                             <view>微信支付
-                                <text style="color:#E05457;">￥680</text>
+                                <text style="color:#E05457;">￥{{item.je}}</text>
                             </view>
                         </view>
 

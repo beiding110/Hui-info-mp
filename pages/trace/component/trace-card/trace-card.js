@@ -31,7 +31,7 @@ Component({
         },
         save: {
             type: Function,
-            value: function() {}
+            value: undefined
         }
     },
 

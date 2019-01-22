@@ -1,1 +1,9 @@
-/* pages/bidding/detail/detail.wxss */
+.weui-form-preview+.weui-form-preview{margin-top:10px;}
+
+.weui-form-preview__hd{text-align: left;}
+.weui-form-preview__hd .weui-form-preview__value.addtime{text-align: center; color:#909399; font-size:1.2em;}
+
+.weui-form-preview__hd .weui-form-preview__value {
+    font-style: normal;
+    font-size: 1.6em;
+}

@@ -1,13 +1,14 @@
 <scroll-loader
     action="/Api/FaPiao/FaPiaoList"
     value="{{tableData}}"
-    bindinput="{{tableDataUpdate}}"
-    id="loader">
+    bindinput="tableDataUpdate"
+    id="loader"
+    lazy>
 
     <card
         class="info--card"
         wx:for="{{tableData}}"
-        wx:key="item.PaymentTime"
+        wx:key="{{item.PaymentTime}}"
         bindtap="toDetail"
         data-item="{{item}}">
         <view class="invoice-to--card__title" slot="header">
@@ -15,7 +16,7 @@
         </view>
 
         <view class="invoice-to--card__body">
-            申请时间：{{item.PaymentTime}}
+            申请时间：{{item.AddTime}}
         </view>
     </card>
 

@@ -28,3 +28,10 @@ button[type=primary].button-hover{background-color:#AF71CD;}
 .table{display:table}
 .tr{display:table-row}
 .td{display:table-cell}
+
+h1{font-weight:bold;}
+
+.rich-text__con{display: block !important;}
+.rich-text__con table{width: 100% !important; border-collapse:collapse; border:none; table-layout: fixed; display: block;}
+.rich-text__con table td{max-width: 100% !important; border: 1px solid #F2F6FC;}
+.rich-text__con table tr td:first-child{ }

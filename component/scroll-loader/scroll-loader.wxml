@@ -8,6 +8,10 @@
         <loading></loading>
     </view>
 
+    <view class="scroll-loader--loadingTip no-info" wx-if="{{!upperLoading && !lowerLoading && (model.length === 0)}}">
+        无数据
+    </view>
+
     <view class="scroll-loader--list">
         <slot></slot>
     </view>

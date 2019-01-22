@@ -12,10 +12,10 @@
 <view class="trace-detail__list-con">
     <navbar>
         <nav-item label="招标" name="tab1">
-            <bidding-list extra="{{searchObj}}" url="/Api/Biding/GetDingYueList" lazy></bidding-list>
+            <bidding-list id="bidding-list" extra="{{searchObj}}" url="/Api/Biding/GetDingYueList" lazy></bidding-list>
         </nav-item>
         <nav-item label="项目" name="tab2">
-            <project-list extra="{{searchObj}}" url="/Api/Project/GetDingYueList" lazy></project-list>
+            <project-list id="project-list" extra="{{searchObj}}" url="/Api/Project/GetDingYueList" lazy></project-list>
         </nav-item>
     </navbar>
 </view>

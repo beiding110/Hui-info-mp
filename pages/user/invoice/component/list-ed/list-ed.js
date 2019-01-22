@@ -28,7 +28,7 @@ Component({
             });
         },
         toDetail(e) {
-            let ds = e.target.dataset;
+            let ds = e.currentTarget.dataset;
 
             app.globalData.invoicedInfo = ds.item
 

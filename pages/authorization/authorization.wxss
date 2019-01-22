@@ -1,39 +1,21 @@
 /**index.wxss**/
-.userinfo {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.userinfo {margin-top: 30px;display: flex;flex-direction: column;align-items: center;}
+
+.userinfo-avatar {width: 128rpx;height: 128rpx;margin: 20rpx;border-radius: 50%;}
+
+.userinfo-nickname {color: white;}
+
+.usermotto {text-align:center;font-size:16px;width:80%;color:white;letter-spacing: 3px;}
+
+.usermotto h1{font-size:30px; font-weight:normal;}
+.usermotto h2{font-size:15px;}
+
+.container{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:200rpx 0;box-sizing:border-box;font-size: 20px;background: linear-gradient(to bottom left, #FF95AB , #705ADE);}
+
+page{
+
 }
 
-.userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
-}
+.logo{width:100%;}
 
-.userinfo-nickname {
-    color: #aaa;
-}
-
-.usermotto {
-    text-align:center;
-    font-size:16px;
-}
-
-.container{
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-between;
-    padding:200rpx 0;
-    box-sizing:border-box;
-    font-size: 20px;
-    background:white;
-}
-
-page{height:auto; background:white;}
-
-.logo{width:200px;}
+.btn_begin{display: inline-block; background:linear-gradient(to right, #EB72C0 , #FEC55E); border-radius:23px; padding:0 30px; margin-top:30px;}

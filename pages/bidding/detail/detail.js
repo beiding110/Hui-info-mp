@@ -13,7 +13,9 @@ Page({
         labelWidth: '80px',
 
         guid: '',
-        type: ''
+        type: '',
+
+        timeFormatter: function(){}
     },
     queryData() {
         var that = this,
@@ -24,6 +26,8 @@ Page({
             id: guid,
             type: type
         }, (data) => {
+            data.bulletin_issue_time = this.timeFormatter(data.bulletin_issue_time);
+
             this.setData({
                 detail: data || {},
                 collect: data.Collection
@@ -34,6 +38,14 @@ Page({
         this.setData({
             collect: e.detail
         })
+    },
+    timeFormatter(time){
+        try{
+            var yyyy = time.substring(0,4);
+            var MM = time.substring(4,6);
+            var dd = time.substring(6,8);
+            return yyyy + '-' + MM + '-' + dd;
+        }catch(e){}
     },
 
     /**
@@ -50,7 +62,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        this.queryData()
+        this.queryData();
     },
 
     /**

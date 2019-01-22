@@ -7,7 +7,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        tableData: []
+        tableData: [],
+
+        officalHidden: true
     },
     tableDataUpdate(e) {
         this.setData({
@@ -16,6 +18,16 @@ Page({
     },
     queryData() {
         this.selectComponent('#scrollLoder').reload();
+    },
+    officalLoaded() {
+        this.setData({
+            officalHidden: false
+        })
+    },
+    closeFixed() {
+        this.setData({
+            officalHidden: true
+        })
     },
 
     /**
@@ -38,8 +50,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        console.log('show')
-        this.queryData()
         if(app.globalData.traceSign){
             this.queryData();
             app.globalData.traceSign = false;

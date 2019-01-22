@@ -31,11 +31,13 @@ Page({
         getDictionary.call(this);
 
         // _.$get('/Api/User/LoginOut', () => {
-            // _.$get('/Api/User/GetUserInfo', () => {
+        //
                 codeGetter.call(this, () => {
-                    this.queryData();
+                    // _.$get('/Api/User/GetUserInfo', () => {
+                        this.queryData();
+                    // })
                 })
-            // })
+        //
         // })
     },
     keyNameUpdate(e) {

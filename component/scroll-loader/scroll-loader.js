@@ -47,7 +47,7 @@ Component({
         reload() {
             this.setData({
                 loadController: true,
-                PageIndex: 1
+                pageIndex: 0
             });
             this.queryData(0, () => {
                 // console.log('upper complete')
@@ -73,7 +73,7 @@ Component({
 
                     // setTimeout(() => {
                     var search = {
-                        PageIndex: this.data.pageIndex
+                        pageIndex: (this.data.pageIndex + 1)
                     };
                     _.mixin(this.properties.extra, search);
                     _.$get(this.properties.action, search, (data) => {
@@ -91,7 +91,7 @@ Component({
                         };
 
                         let dataObj = {
-                            PageIndex: !type ? 1 : (this.data.PageIndex + 1)
+                            pageIndex: !type ? 1 : (this.data.pageIndex + 1)
                         };
                         dataObj[loadingType] = false;
                         this.setData(dataObj);

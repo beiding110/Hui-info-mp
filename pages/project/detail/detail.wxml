@@ -3,7 +3,7 @@
 
         <view class="weui-form-preview__hd">
     		<h1 class="weui-form-preview__value">{{detail.Title}}</h1>
-            <font class="weui-form-preview__value addtime">{{timeFormatter(detail.AddTime)}}</font>
+            <font class="weui-form-preview__value addtime">{{detail.AddTime}}</font>
         </view>
         <view class="weui-form-preview__bd">
             <table-con
@@ -22,7 +22,7 @@
     	<view class="weui-panel__bd">
     		<view class="weui-media-box weui-media-box_text">
     			<h4 class="weui-media-box__title">项目内容</h4>
-                <rich-text class="weui-media-box__desc rich-text__con" nodes="{{detail.Content}}"></rich-text>
+                <rich-text class="rich-text__con" nodes="{{detail.Content}}"></rich-text>
     		</view>
     	</view>
     </view>
