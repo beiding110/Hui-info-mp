@@ -5,7 +5,7 @@
 <view class="trace-detail__infotip">
     <view class="iconfont icon-zuobiao"></view>
     今日更新
-    <font class="infotip-num">21</font>
+    <font class="infotip-num">{{addToday}}</font>
     条
 </view>
 

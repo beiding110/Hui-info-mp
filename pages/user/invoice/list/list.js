@@ -9,6 +9,7 @@ Page({
     },
     reload() {
         this.selectComponent('#listTo').reload();
+        this.selectComponent('#listTo').cancelBtnHandler();
         this.selectComponent('#listEd').reload();
     },
 

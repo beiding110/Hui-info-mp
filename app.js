@@ -1,5 +1,5 @@
 import _ from './js/app-mp'
-import loginHandler from './utils/loginHandler.js'
+import getUserInfoHandler from './utils/getUserInfoHandler.js'
 
 //app.js
 App({
@@ -7,7 +7,8 @@ App({
 
         (new _.Chain()).link(function(that, next) {
 
-            // 登录
+            // wx登录获取code，用于注入ajax中heade；
+            //该项必须处于最先，code用于所有ajax的请求头；
             wx.login({
                 success: res => {
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
@@ -16,10 +17,10 @@ App({
                     next()
                 }
             });
-
+            
         }).link(function(that, next) {
 
-            // 获取用户信息
+            // 获取用户授权信息
             wx.getSetting({
                 success: res => {
                     if (res.authSetting['scope.userInfo']) {
@@ -27,6 +28,7 @@ App({
                         next();
 
                     } else {
+                        // 未授权则进入授权页面
                         wx.redirectTo({
                             url: '/pages/authorization/authorization'
                         })
@@ -36,24 +38,12 @@ App({
 
         }).link(function(that, next) {
 
-            // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-            wx.getUserInfo({
-                success: res => {
-                    console.log(res)
-                    // 可以将 res 发送给后台解码出 unionId
-                    that.globalData.userInfo = res.userInfo;
-
-                    //登录操作
-                    loginHandler.call(that, res.userInfo)
-
-                    next();
-                }
-            })
+            // 获取个人信息，包括头像昵称城市等；
+            getUserInfoHandler.call(that, next)
 
         }).link(function(that, next) {
 
-            // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-            // 所以此处加入 callback 以防止这种情况
+            // 调用获取信息成功回调；
             if (that.userInfoReadyCallback) {
                 that.userInfoReadyCallback(res)
             }

@@ -2,6 +2,7 @@
 //获取应用实例
 import _ from '../../js/app-mp'
 const app = getApp()
+import getUserInfoHandler from '../../utils/getUserInfoHandler.js'
 
 Page({
     data: {
@@ -56,8 +57,10 @@ Page({
                 hasUserInfo: true
             });
 
-            wx.reLaunch({
-                url: '/pages/bidding/list/list'
+            getUserInfoHandler.call(app, function() {}, () => {
+                wx.reLaunch({
+                    url: '/pages/bidding/list/list'
+                });
             });
         }
     }

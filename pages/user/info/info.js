@@ -66,7 +66,7 @@ Page({
     },
     queryInfo() {
         _.$get('/Api/user/GetUserInfo', (data) => {
-            app.globalData.userInfo = data;
+            data.VipEndDate = (data.VipEndDate || '').split(' ')[0];
             this.setData({
                 form: data
             });

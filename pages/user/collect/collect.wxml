@@ -1,8 +1,8 @@
 <navbar>
     <nav-item label="招标" name="tab1">
-        <bidding-list url="/Api/Collection/GetCollectList?type=ZhaoBiao" lazy id="bidding-list"></bidding-list>
+        <bidding-list url="/Api/Collection/GetCollectList?type=ZhaoBiao" lazy id="bidding-list" bindcollect="biddingReload"></bidding-list>
     </nav-item>
     <nav-item label="项目" name="tab2">
-        <project-list url="/Api/Collection/GetCollectList?type=Project" lazy id="project-list"></project-list>
+        <project-list url="/Api/Collection/GetCollectList?type=Project" lazy id="project-list" bindcollect="projectReload"></project-list>
     </nav-item>
 </navbar>

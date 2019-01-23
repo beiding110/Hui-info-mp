@@ -1,4 +1,5 @@
-// pages/trace/detail/detail.js
+import _ from '../../../js/app-mp'
+
 Page({
 
     /**
@@ -11,6 +12,17 @@ Page({
             RowGuid: '',
             DateRange: ''
         },
+
+        addToday: 0
+    },
+    queryAddToday() {
+        _.$get('/Api/DingYue/GetTodayNum', {
+            id: this.data.searchObj.RowGuid
+        }, (data) => {
+            this.setData({
+                addToday: data
+            })
+        })
     },
 
     /**
@@ -25,6 +37,8 @@ Page({
         });
         this.selectComponent('#bidding-list').reload();
         this.selectComponent('#project-list').reload();
+
+        this.queryAddToday();
     },
 
     /**

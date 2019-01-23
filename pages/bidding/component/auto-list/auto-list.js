@@ -51,7 +51,11 @@ Component({
                     });
                 wx.navigateTo({
                     url: '/pages/bidding/detail/detail' + search
-                })
+                });
+
+                this.setData({
+                    ['tableData[' + ds.index + '].IsRead']: 1
+                });
             })
         },
         reload() {
@@ -61,8 +65,8 @@ Component({
             return / /.test(time) ? time.split(' ')[0] : time;
         },
         longpressHandler(e) {
-            console.log(e);
-            let ds = e.target.dataset;
+            let ds = e.currentTarget.dataset,
+                that = this;
             wx.showActionSheet({
                 itemList: ['添加/取消收藏该条数据'],
                 itemColor: '#BC86D6',
@@ -70,7 +74,9 @@ Component({
                     _.$get('/Api/Collection/SetCollectState', {
                         id: ds.guid
                     }, (data, res) => {
-                        _.showMsg(res.Msg)
+                        that.triggerEvent('collect');
+                        app.globalData.collectSign = true;
+                        _.showMsg(res.Msg);
                     })
                 }
             })

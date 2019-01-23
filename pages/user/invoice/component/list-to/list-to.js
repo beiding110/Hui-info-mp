@@ -78,7 +78,7 @@ Component({
                 checkedArr: e.detail.value,
                 checkedObjArr: objArr
             });
-            console.log(e.detail.value, objArr)
+            // console.log(e.detail.value, objArr)
         },
         cancelBtnHandler() {
             this.setData({
@@ -88,6 +88,13 @@ Component({
         },
         toMultiInvoiceHandler() {
             var sumJE = 0;
+
+            if(this.data.checkedObjArr.some((item) => {
+                return !!item.FaPiaoGuid
+            })) {
+                return _.showMsgBox('存在已开票的项，请勿重复开票');
+            }
+
             this.data.checkedObjArr.forEach((item) => {
                 sumJE = Number(sumJE) + Number(item.FkJe)
             }),

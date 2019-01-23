@@ -9,7 +9,13 @@ Page({
 
     },
     queryList() {
+        this.biddingReload();
+        this.projectReload();
+    },
+    biddingReload() {
         this.selectComponent('#bidding-list').reload();
+    },
+    projectReload() {
         this.selectComponent('#project-list').reload();
     },
 

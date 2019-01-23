@@ -1,5 +1,6 @@
 import _ from '../../../js/app-mp'
 var app = getApp()
+import loginHandler from '../../../utils/loginHandler.js'
 
 // pages/user/vip-pay/vip-pay.js
 Page({
@@ -11,16 +12,33 @@ Page({
 
     },
     dopay: function() {
-        var that = this;
-        _.$get('/Api/User/GetZhiFuUrl', {
-            OpenID: app.globalData.srcOpenid || ''
-        }, function(data){
-            var search = _.toSearch({
-                src: data
-            });
-            wx.navigateTo({
-                url: '/pages/webview' + search
-            });
+        // var that = this;
+        // _.$get('/Api/User/GetZhiFuUrl', {
+        //     OpenID: app.globalData.srcOpenid || ''
+        // }, function(data){
+        //     var search = _.toSearch({
+        //         src: data
+        //     });
+        //     wx.navigateTo({
+        //         url: '/pages/webview' + search
+        //     });
+        // })
+
+        _.$post('/Api/Payment/AddOrder', (data) => {
+            data.success = (res) => {
+                _.showMsg('欢迎成为惠信息会员');
+                app.globalData.reMobile = true;
+
+                loginHandler.call(app, app.globalData.userInfo);
+            };
+            data.fail = (res) => {
+                _.showMsg('支付失败');
+            };
+            data.complete = (res) => {
+                console.log(res)
+            }
+
+            wx.requestPayment(data);
         })
     },
 
