@@ -10,11 +10,11 @@
     </view>
 
     <card class="info--card">
-        <view class="info--card__title">会员权益</view>
+        <view class="info--card__title">套餐权益</view>
 
         <vip-table></vip-table>
     </card>
 
-    <button type="primary" bindtap="dopay" class="info--card">购买</button>
+    <button type="primary" bindtap="dopay" class="info--card">获取</button>
 
 </view>

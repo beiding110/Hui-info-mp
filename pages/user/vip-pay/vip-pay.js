@@ -26,7 +26,7 @@ Page({
 
         _.$post('/Api/Payment/AddOrder', (data) => {
             data.success = (res) => {
-                _.showMsg('欢迎成为惠信息会员');
+                _.showMsg('惠信息套餐获取成功');
                 app.globalData.reMobile = true;
 
                 loginHandler.call(app, app.globalData.userInfo);

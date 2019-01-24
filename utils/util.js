@@ -23,7 +23,7 @@ const vipTest = cb => {
         let search = _.toSearch({
             type: 'error',
             title: '抱歉',
-            text: '您是非会员，无权限查看此内容'
+            text: '您未获取套餐，无权限查看此内容'
         });
         wx.navigateTo({
             url: '/pages/msg/msg' + search

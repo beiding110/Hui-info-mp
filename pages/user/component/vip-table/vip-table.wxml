@@ -1,8 +1,8 @@
 <view class="table">
     <view class="tr">
-        <view class="th">会员特权</view>
-        <view class="th">非会员</view>
-        <view class="th">会员</view>
+        <view class="th">套餐特权</view>
+        <view class="th">无套餐</view>
+        <view class="th">套餐</view>
     </view>
 
     <view class="tr">

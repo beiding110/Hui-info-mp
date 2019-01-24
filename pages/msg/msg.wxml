@@ -12,16 +12,16 @@
                 <view class="weui-flex__item sel-btn__flex">
                     <button type="primary" bindtap="goBack">返 回</button>
                 </view>
-                <view class="weui-flex__item sel-btn__flex" wx:if="{{!isVip}}">
+                <!-- <view class="weui-flex__item sel-btn__flex" wx:if="{{!isVip}}">
                     <button type="warn" bindtap="goVipPay">购 买</button>
-                </view>
+                </view> -->
             </view>
         </view>
     </view>
 
-    <card class="info--card" wx:if="{{!isVip}}">
+    <!-- <card class="info--card" wx:if="{{!isVip}}">
         <vip-table></vip-table>
-    </card>
+    </card> -->
 
     <!-- <view class="weui-msg__extra-area">
         <view class="weui-footer">

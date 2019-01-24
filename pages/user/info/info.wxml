@@ -15,7 +15,7 @@
                         <i class="{{IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
                     </view>
                     <view>
-                        {{IsVip ? ('会员到期日：'+ form.VipEndDate) : '非会员'}}
+                        {{IsVip ? ('套餐到期日：'+ form.VipEndDate) : '无套餐'}}
                     </view>
                 </view>
             </view>
@@ -26,10 +26,10 @@
                     {{!!form.Mobile ? ('已绑定：' + form.Mobile) : '绑定手机号'}}
                 </view>
 
-                <view class="function__card" bindtap="toVipPay">
+                <!-- <view class="function__card" bindtap="toVipPay">
                     <i class="iconfont icon-huiyuan" style="color:#84B2FD;"></i>
-                    购买会员
-                </view>
+                    获取套餐
+                </view> -->
             </view>
 
             <view class="function__card--group">
