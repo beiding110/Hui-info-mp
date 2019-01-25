@@ -45,10 +45,6 @@ Page({
             });
         })
 
-        this.setData({
-            form: app.globalData.
-        })
-
         this.selectComponent('#bidding-list').reload();
         this.selectComponent('#project-list').reload();
 
