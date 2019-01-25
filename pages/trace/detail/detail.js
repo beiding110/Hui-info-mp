@@ -38,7 +38,7 @@ Page({
         });
 
         _.$get('/Api/DingYue/GetDetail', {
-            id: this.data.form.RowGuid
+            id: this.data.searchObj.RowGuid
         }, (data) => {
             this.setData({
                 form: data
