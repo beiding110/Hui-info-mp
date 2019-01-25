@@ -13,7 +13,8 @@ Page({
             DateRange: ''
         },
 
-        addToday: 0
+        addToday: 0,
+        form: {}
     },
     queryAddToday() {
         _.$get('/Api/DingYue/GetTodayNum', {
@@ -35,6 +36,19 @@ Page({
             'searchObj.DateRange': options.DateRange || '',
             'searchObj.KeyName': options.KeyName || '',
         });
+
+        _.$get('/Api/DingYue/GetDetail', {
+            id: this.data.form.RowGuid
+        }, (data) => {
+            this.setData({
+                form: data
+            });
+        })
+
+        this.setData({
+            form: app.globalData.
+        })
+
         this.selectComponent('#bidding-list').reload();
         this.selectComponent('#project-list').reload();
 

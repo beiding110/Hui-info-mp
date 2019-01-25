@@ -94,6 +94,7 @@ Component({
                 DateRange: dataset.daterange,
                 KeyName: dataset.keyname
             });
+
             wx.navigateTo({
                 url: ('/pages/trace/detail/detail' + search)
             });
