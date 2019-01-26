@@ -25,6 +25,7 @@ function $ajax(arg) {
 
                 if(obj.Success){
                     app.globalData.IsVip = obj.IsVip;
+                    app.globalData.IsTry = obj.IsTry;
 
                     if(/{|}|\[|\]/.test(obj.Data) && typeof obj.Data == 'string'){
                         arg.success && arg.success(JSON.parse(obj.Data), obj);

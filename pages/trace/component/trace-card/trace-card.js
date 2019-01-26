@@ -95,9 +95,11 @@ Component({
                 KeyName: dataset.keyname
             });
 
-            wx.navigateTo({
-                url: ('/pages/trace/detail/detail' + search)
-            });
+            util.vipTest(() => {
+                wx.navigateTo({
+                    url: ('/pages/trace/detail/detail' + search)
+                });
+            })
         },
     }
 })

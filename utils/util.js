@@ -19,7 +19,7 @@ const formatNumber = n => {
 const vipTest = cb => {
     let app = getApp();
 
-    if(!app.globalData.IsVip){
+    if(!app.globalData.IsVip && !app.globalData.IsTry){
         let search = _.toSearch({
             type: 'error',
             title: '抱歉',

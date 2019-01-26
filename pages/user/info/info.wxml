@@ -15,7 +15,7 @@
                         <i class="{{IsVip ? 'iconfont icon-vip vipIcon active' : 'iconfont icon-vip vipIcon'}}"></i>
                     </view>
                     <view>
-                        {{IsVip ? ('套餐到期日：'+ form.VipEndDate) : '无套餐'}}
+                        {{IsVip ? ('套餐到期日：'+ form.VipEndDate) : ( IsTry ? ('试用到期日：' + form.VipEndDate) : '无套餐' )}}
                     </view>
                 </view>
             </view>

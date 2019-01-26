@@ -11,7 +11,8 @@ Page({
             nickName: '游客'
         },
         hasUserInfo: false,
-        IsVip: false
+        IsVip: false,
+        IsTry: false
     },
     onLoad: function () {
         if (app.globalData.userInfo) {
@@ -36,7 +37,8 @@ Page({
     },
     onShow() {
         this.setData({
-            IsVip: app.globalData.IsVip
+            IsVip: app.globalData.IsVip,
+            IsTry: app.globalData.IsTry
         });
 
         if(app.globalData.reMobile) {
