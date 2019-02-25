@@ -2,7 +2,7 @@
     <card>
         <panel-select
             text="设置时间段"
-            placeholder="设置后推送该时间段的追踪信息"
+            placeholder="设置后推送该时间段的关注信息"
             data="{{DateRangeData}}"
             value="{{form.DateRange}}"
             bindinput="modelUpdate"
@@ -14,7 +14,7 @@
     <card>
         <panel-select
             text="设置地区"
-            placeholder="设置后推送该地区的追踪信息"
+            placeholder="设置后推送该地区的关注信息"
             data="{{CityData}}"
             value="{{form.CityCode}}"
             bindinput="modelUpdate"

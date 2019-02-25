@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "惠信息·追踪详细设置",
+    "navigationBarTitleText": "惠信息·关注详细设置",
     "usingComponents": {
       "card": "/component/card/card",
       "panel-select": "../component/panel-select/panel-select"

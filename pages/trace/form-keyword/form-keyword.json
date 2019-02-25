@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "惠信息·追踪关键字设置",
+    "navigationBarTitleText": "惠信息·关注关键字设置",
     "usingComponents": {
       "trace-card": "../component/trace-card/trace-card"
     }

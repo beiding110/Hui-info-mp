@@ -45,6 +45,12 @@
                 "text": "项目"
             },
             {
+                "pagePath": "pages/trace/list/list",
+                "iconPath": "icon/icon-trace.png",
+                "selectedIconPath": "icon/icon-trace-sel.png",
+                "text": "关注"
+            },
+            {
                 "pagePath": "pages/user/info/info",
                 "iconPath": "icon/icon-user.png",
                 "selectedIconPath": "icon/icon-user-sel.png",

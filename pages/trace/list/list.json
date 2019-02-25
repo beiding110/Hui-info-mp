@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "惠信息·追踪列表",
+    "navigationBarTitleText": "惠信息·关注列表",
     "usingComponents": {
         "scroll-loader": "/component/scroll-loader/scroll-loader",
         "trace-card": "../component/trace-card/trace-card"

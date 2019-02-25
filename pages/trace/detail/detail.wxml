@@ -1,5 +1,5 @@
 <view class="trace-detail__title">
-    {{form.KeyName}}——{{form.CityName}}——{{dateObj[form.DateRange]}}
+    {{form.KeyName}}——{{form.CityName}}——{{form.DateRange}}
 </view>
 
 <view class="trace-detail__infotip">

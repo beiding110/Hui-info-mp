@@ -51,7 +51,7 @@ Page({
             })
         } else {
             if(this.data.form.RowGuid) {
-                _.showConform('关键字为空，将删除该条追踪', () => {
+                _.showConform('关键字为空，将删除该条关注', () => {
                     _.$get('/Api/DingYue/DeleteDingYue', {
                         id: this.data.form.RowGuid
                     }, function(data){
@@ -61,7 +61,7 @@ Page({
                     })
                 })
             } else {
-                _.showConform('关键字为空，将删除该条追踪', () => {
+                _.showConform('关键字为空，将删除该条关注', () => {
                     wx.navigateBack()
                 })
             }
