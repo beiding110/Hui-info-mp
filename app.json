@@ -2,24 +2,19 @@
     "pages": [
         "pages/bidding/list/list",
         "pages/bidding/detail/detail",
-
         "pages/project/list/list",
         "pages/project/detail/detail",
-
         "pages/trace/list/list",
         "pages/trace/form-keyword/form-keyword",
         "pages/trace/form-settings/form-settings",
         "pages/trace/detail/detail",
-
         "pages/user/info/info",
         "pages/user/phone/phone",
         "pages/user/vip-pay/vip-pay",
         "pages/user/collect/collect",
-
         "pages/user/invoice/list/list",
         "pages/user/invoice/detail/detail",
         "pages/user/invoice/form/form",
-
         "pages/webview/webview",
         "pages/authorization/authorization",
         "pages/msg/msg"
@@ -63,5 +58,6 @@
     },
     "networkTimeout": {
         "request": 60000
-    }
+    },
+    "sitemapLocation": "sitemap.json"
 }

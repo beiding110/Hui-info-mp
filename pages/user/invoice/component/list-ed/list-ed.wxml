@@ -12,10 +12,15 @@
         bindtap="toDetail"
         data-item="{{item}}">
         <view class="invoice-to--card__title" slot="header">
+            【{{item.FpHsBj === '0' ? '未开票' : '已开票'}}】
+
             {{item.FpType}}-{{item.Je}}
         </view>
 
         <view class="invoice-to--card__body">
+            申请时间：{{item.AddTime}}
+        </view>
+        <view class="invoice-to--card__body" wx:if="{{item.FpHsBj === '1'}}">
             申请时间：{{item.AddTime}}
         </view>
     </card>
