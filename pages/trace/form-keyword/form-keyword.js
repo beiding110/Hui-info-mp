@@ -30,11 +30,24 @@ Page({
         this.setData({
             'form.KeyName': e.detail
         });
+
+        this.testKeyName();
+    },
+    testKeyName() {
+        if(/[^\u4e00-\u9fa50-9a-zA-Z ]/.test(this.data.form.KeyName)) {
+            _.showMsgBox('关键字内容请勿包含标点符号及特殊字符，多个关键字请使用“空格”隔开，如：“工程 医疗 设备”');
+            return false;
+        };
+        return true
     },
     doSave(callback) {
         var that = this;
 
         if(this.data.form.KeyName) {
+            if(!this.testKeyName()) {
+                return;
+            };
+
             _.$post('/Api/DingYue/DingYueManager', this.data.form, (data) => {
                 app.globalData.traceSign = true;
                 this.setData({
