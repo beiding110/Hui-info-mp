@@ -4,8 +4,11 @@
 
 <view class="trace-detail__infotip">
     <view class="iconfont icon-zuobiao"></view>
-    今日更新
-    <font class="infotip-num">{{addToday}}</font>
+    今日更新：
+    招标信息
+    <font class="infotip-num">{{addToday.Bidding}}</font>
+    条，项目信息
+    <font class="infotip-num">{{addToday.Project}}</font>
     条
 </view>
 

@@ -13,7 +13,7 @@ Page({
             DateRange: ''
         },
 
-        addToday: 0,
+        addToday: {},
         form: {}
     },
     queryAddToday() {
