@@ -2,9 +2,8 @@
     "navigationBarTitleText": "惠信息·招标详情",
     "usingComponents": {
       "card": "/component/card/card",
-      "cell-list": "/component/cell-list/cell-list",
-      "cell": "/component/cell/cell",
       "table-con": "/component/table-con/table-con",
-      "collect-star": "/pages/component/collect-star/collect-star"
+      "collect-star": "/pages/component/collect-star/collect-star",
+      "tag": "/component/tag/tag"
     }
 }

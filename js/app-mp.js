@@ -2,6 +2,7 @@ const app = getApp();
 import ajax from './ajax.js'
 import Chain from './Chain.js'
 import ui from './ui.js'
+import './Date.js'
 
 const _ = {
     clone(obj) {

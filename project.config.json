@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.4",
+	"libVersion": "2.8.3",
 	"appid": "wxf9fa6b94142e7381",
 	"projectname": "hui-info-mp",
 	"debugOptions": {

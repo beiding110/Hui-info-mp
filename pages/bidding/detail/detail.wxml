@@ -3,8 +3,16 @@
         <view class="weui-form-preview">
 
         	<view class="weui-form-preview__hd">
-        		<h1 class="weui-form-preview__value">{{detail.publicity_name}}</h1>
-                <text class="weui-form-preview__value addtime">{{detail.bulletin_issue_time}}</text>
+                <view class="text-title">{{detail.publicity_name}}</view>
+
+                <view class="text-sub-title">
+                    <tag type="info" wx:if="{{detail.cityname}}">{{detail.cityname}}</tag>
+                    <tag wx:if="{{detail.TypeName}}">{{detail.TypeName}}</tag>
+                    <tag type="warn" wx:if="{{detail.hyname}}">{{detail.hyname}}</tag>
+                    <text class="addtime">
+                        {{detail.PubInWebDate}}
+                    </text>
+                </view>
             </view>
         	<view class="weui-form-preview__bd">
                 <table-con
@@ -56,13 +64,23 @@
     </card>
 </block>
 
-<block wx:elif="{{type==='GongGao'}}">
+<block wx:else>
     <card class="info--card">
         <view class="weui-form-preview">
 
         	<view class="weui-form-preview__hd">
-        		<h1 class="weui-form-preview__value">{{detail.bulletin_name}}</h1>
-                <text class="weui-form-preview__value addtime">{{detail.bulletin_issue_time}}</text>
+                <h1 class="text-title">
+                    {{detail.Title}}
+                </h1>
+
+                <view class="text-sub-title">
+                    <tag type="info" wx:if="{{detail.cityname}}">{{detail.cityname}}</tag>
+                    <tag wx:if="{{detail.TypeName}}">{{detail.TypeName}}</tag>
+                    <tag type="warn" wx:if="{{detail.hyname}}">{{detail.hyname}}</tag>
+                    <text class="addtime">
+                        {{detail.PubInWebDate}}
+                    </text>
+                </view>
             </view>
 
         </view>
@@ -71,9 +89,7 @@
         <view class="weui-panel">
         	<view class="weui-panel__bd">
         		<view class="weui-media-box weui-media-box_text">
-        			<text class="weui-media-box__title">公告内容</text>
-        			<!-- <text class="weui-media-box__desc rich-text__con" v-html="detail.bulletin_content"></text> -->
-                    <rich-text class="rich-text__con" nodes="{{detail.bulletin_content}}"></rich-text>
+                    <rich-text class="rich-text__con" nodes="{{detail.Content}}"></rich-text>
         		</view>
         	</view>
         </view>
