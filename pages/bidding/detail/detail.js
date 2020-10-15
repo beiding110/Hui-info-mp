@@ -27,12 +27,15 @@ Page({
             type: type
         }, (data) => {
 
-            if(type==='GongShi') {
-                data.publicity_content = this.richTableToLongTable(data.publicity_content);
-                data.bulletin_issue_time = this.timeBeforeCalc(this.timeFormatter(data.bulletin_issue_time));
-            } else {
+            if(type==='GongGao') {
                 data.Content = this.contentTableToMobileGg(data.Content);
                 data.PubInWebDate = this.timeBeforeCalc(this.timeFormatter(data.PubInWebDate));
+            } if(type === 'T_ZhongBiaoGongGao' || type === 'T_KaiBiaoJiLu') {
+                data.Content = this.richTableToLongTable(data.Content);
+                data.PubInWebDate = this.timeBeforeCalc(this.timeFormatter(data.PubInWebDate));
+            } else {
+                data.publicity_content = this.richTableToLongTable(data.publicity_content);
+                data.bulletin_issue_time = this.timeBeforeCalc(this.timeFormatter(data.bulletin_issue_time));
             };
 
             this.setData({
@@ -95,7 +98,7 @@ Page({
         }
     },
     contentTableToMobileGg (str) {
-        if(this.detailType !== 'GongGao') return str;
+        if(this.data.type !== 'GongGao') return str;
 
         function DtableBuilder(obj) {
             this.init(obj);
