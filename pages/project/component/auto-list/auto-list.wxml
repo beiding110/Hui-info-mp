@@ -32,7 +32,7 @@
             </view>
             <view class="info--body__right">
                 <view class="price">￥{{item.TzZe}}</view>
-                <view>{{timeFormatter(item.AddTime)}}</view>
+                <view>{{item.AddTime}}</view>
             </view>
         </view>
         <view slot="footer" class="info--card__footer">

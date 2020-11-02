@@ -29,7 +29,7 @@
                     <text>代理机构：{{item.zbdlname}}</text>
                 </view>
             </view>
-            <view class="info--body__right">{{timeFormatter(item.AddTime)}}</view>
+            <view class="info--body__right">{{item.AddTime}}</view>
         </view>
         <view slot="footer" class="info--card__footer">
             <view class="info--footer__left">

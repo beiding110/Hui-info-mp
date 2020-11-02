@@ -38,8 +38,12 @@ Component({
      */
     methods: {
         tableDataUpdate(e) {
+            var tableData = e.detail;
+            tableData.forEach(item => {
+                item.AddTime = util.timeBeforeCalc(item.AddTime);
+            });
             this.setData({
-                tableData: e.detail
+                tableData
             });
         },
         toDetail(e) {
